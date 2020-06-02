@@ -1,11 +1,12 @@
 {
+  "OPO": "Ottawa Pops Orchestra",
   "home": "home",
   "about": "About Us",
   "concerts": "Concerts",
   "orchestra": "Orchestra",
-  "community": "community",
-  "contact": "contact",
-  "covid": "Covid-19",
+  "community": "Community",
+  "contact": "Contact",
+  "covid": "COVID-19",
   "seasonTickets": "Season Tickets",
   "auditions": "Auditions",
   "conductors": "Conductors"
