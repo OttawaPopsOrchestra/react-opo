@@ -3,14 +3,14 @@ import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
-// import InboxIcon from "@material-ui/icons/MoveToInbox";
-// import MailIcon from "@material-ui/icons/Mail";
+import MusicNoteIcon from "@material-ui/icons/MusicNote";
 import styled from "styled-components/macro";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { navBackground } from "../../constants/colors";
+import { ListItemText, Divider } from "@material-ui/core";
 
-const WIDTH = 250;
+const WIDTH = 280;
 
 const LeftDrawerStyles = styled(List)`
   width: ${WIDTH}px;
@@ -18,19 +18,25 @@ const LeftDrawerStyles = styled(List)`
   flex-direction: column;
   align-items: center !important;
 
-  background-color: ${navBackground};
+  /* background-color: ${navBackground}; */
 
   #logo {
     padding: 1em;
   }
 
-  a {
-    text-align: center;
+  a,
+  .principleMenu,
+  .MuiListItemText-primary {
     color: black;
     text-decoration: none !important;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 700 !important;
+  }
+
+  .principleMenu {
+    padding-left: 16px !important;
+    align-self: flex-start;
   }
 `;
 
@@ -102,14 +108,26 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
             height="100px"
           />
         </Link>
-        {drawerItems.map(({ title, link, subMenu }) => (
-          <ListItem button key={title}>
-            <ListItemIcon>
-              {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
-            </ListItemIcon>
-            <Link to={`/${link}`}>{title}</Link>
-          </ListItem>
-        ))}
+        {drawerItems.map(({ title, link, subMenu }) =>
+          subMenu ? (
+            <>
+              <ListItemText primary={title} className="principleMenu" />
+              {subMenu.map(({ title: subTitle, link: subLink }) => (
+                <ListItem button key={subTitle}>
+                  <ListItemIcon>
+                    <MusicNoteIcon />
+                  </ListItemIcon>
+                  <Link to={`/${subLink}`}>{subTitle}</Link>
+                </ListItem>
+              ))}
+            </>
+          ) : (
+            <ListItem button key={title}>
+              <Link to={`/${link}`}>{title}</Link>
+            </ListItem>
+          )
+        )}
+        <Divider />
       </LeftDrawerStyles>
     </SwipeableDrawer>
   );
