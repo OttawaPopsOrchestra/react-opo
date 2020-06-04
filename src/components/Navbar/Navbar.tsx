@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import LeftDrawer from "../LeftDrawer/LeftDrawer";
 import { Tooltip, IconButton } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import LanguageSelector from "./LanguageSelector";
 
 const NavBarStyles = styled.div`
   display: flex;
@@ -51,6 +52,7 @@ export default () => {
         open={isLeftDrawerOpen}
         setIsLeftDrawerOpen={setIsLeftDrawerOpen}
       />
+      <LanguageSelector />
     </NavBarStyles>
   );
 };

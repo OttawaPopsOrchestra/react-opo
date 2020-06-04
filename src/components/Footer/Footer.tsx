@@ -1,5 +1,5 @@
 import React from "react";
 
 export default () => {
-  return <div style={{ paddingTop: "10em" }}></div>;
+  return <div style={{ paddingTop: "5em" }}>Footer</div>;
 };
