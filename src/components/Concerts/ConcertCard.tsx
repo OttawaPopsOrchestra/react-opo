@@ -7,24 +7,38 @@ import {
   Button,
 } from "@material-ui/core";
 import styled from "styled-components/macro";
+import DateTime, { DateTimeProps } from "./DateTime";
+import { BREAKPOINT_MOBILE } from "../../constants/constants";
 
 const ConcertCardStyles = styled(Card)`
   display: flex;
+  flex-direction: column;
   margin: 2em auto 0;
-  width: 90vw;
+  width: 32em;
 
   .cardText {
     display: grid;
+  }
+
+  img {
+    width: inherit;
+    height: auto;
+    align-self: center;
+  }
+
+  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    width: 30em;
   }
 `;
 
 export type ConcertProps = {
   imgPath: string;
   title: string;
-  description: string;
+  description?: string;
+  timeDates?: DateTimeProps[];
 };
 
-export default ({ imgPath, title, description }: ConcertProps) => {
+export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
   return (
     <ConcertCardStyles>
       <img src={imgPath} alt={title} />
@@ -33,8 +47,13 @@ export default ({ imgPath, title, description }: ConcertProps) => {
           <Typography gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="h6" color="textSecondary" component="p">
             {description}
+          </Typography>
+          <Typography variant="h6" color="textSecondary" component="p">
+            {timeDates?.map((dateTime) => (
+              <DateTime {...dateTime} />
+            ))}
           </Typography>
         </CardContent>
         <CardActions>
