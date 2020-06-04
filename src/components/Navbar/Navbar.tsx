@@ -8,11 +8,12 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 const NavBarStyles = styled.div`
   display: flex;
-  background-color: ${navBackground};
+  /* background-color: ${navBackground}; */
+  background:transparent;
   align-items: center;
 
   #logo {
-    height: 75px;
+    height: 40px;
     padding: 1em;
   }
 

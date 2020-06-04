@@ -31,7 +31,7 @@ const LeftDrawerStyles = styled(List)`
     text-decoration: none !important;
     /* text-transform: uppercase; */
     font-size: 18px;
-    font-weight: 700 !important;
+    font-weight: 300 !important;
   }
 
   .principleMenu {
@@ -110,7 +110,7 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
         </Link>
         {drawerItems.map(({ title, link, subMenu }) =>
           subMenu ? (
-            <>
+            <React.Fragment key={title}>
               <ListItemText primary={title} className="principleMenu" />
               {subMenu.map(({ title: subTitle, link: subLink }) => (
                 <ListItem button key={subTitle}>
@@ -120,7 +120,7 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
                   <Link to={`/${subLink}`}>{subTitle}</Link>
                 </ListItem>
               ))}
-            </>
+            </React.Fragment>
           ) : (
             <ListItem button key={title}>
               <Link to={`/${link}`}>{title}</Link>

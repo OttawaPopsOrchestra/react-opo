@@ -5,6 +5,7 @@ import { Route, Switch, BrowserRouter } from "react-router-dom";
 import AboutUs from "../components/AboutUs";
 // import { useTranslation } from "react-i18next";
 import HomePage from "../components/HomePage";
+import Footer from "../components/Footer/Footer";
 
 function App() {
   // const { t } = useTranslation("Navbar");
@@ -12,9 +13,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Switch>
+        {/* <Switch>
           <Route path="/" component={Navbar} />
-        </Switch>
+        </Switch> */}
+        <Navbar />
         <Switch>
           <Route exact={true} path="/" component={HomePage} />
           <Route exact={true} path="/about" component={AboutUs} />
@@ -23,6 +25,7 @@ function App() {
           <Route exact={true} path="/contact" component={AboutUs} />
           <Route exact={true} path="/covid" component={AboutUs} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </>
   );
