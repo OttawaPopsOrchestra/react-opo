@@ -95,7 +95,7 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
     <SwipeableDrawer
       anchor="left"
       disableDiscovery={true}
-      disableSwipeToOpen={true}
+      disableSwipeToOpen={false}
       open={open}
       onClose={closeDrawer}
       onOpen={openDrawer}
