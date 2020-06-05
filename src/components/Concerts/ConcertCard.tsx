@@ -1,14 +1,9 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  CardActions,
-  Button,
-} from "@material-ui/core";
+import { Card, CardContent, Typography, CardActions } from "@material-ui/core";
 import styled from "styled-components/macro";
 import DateTime, { DateTimeProps } from "./DateTime";
 import { BREAKPOINT_MOBILE } from "../../constants/constants";
+import ActionButton from "./ActionButton";
 
 const ConcertCardStyles = styled(Card)`
   display: flex;
@@ -18,12 +13,18 @@ const ConcertCardStyles = styled(Card)`
 
   .cardText {
     display: grid;
+    grid-template-rows: 150px 80px;
   }
 
   img {
     width: inherit;
     height: auto;
     align-self: center;
+  }
+
+  .MuiCardActions-root {
+    display: grid;
+    grid-template-columns: auto auto;
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
@@ -57,12 +58,8 @@ export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" color="primary">
-            Read More
-          </Button>
-          <Button size="small" color="primary">
-            Buy Tickets
-          </Button>
+          <ActionButton link="/" name="Read More" />
+          <ActionButton link="/" name="Buy Tickets" />
         </CardActions>
       </div>
     </ConcertCardStyles>
