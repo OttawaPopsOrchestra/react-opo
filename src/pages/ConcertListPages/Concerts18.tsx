@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { ConcertProps } from "../components/Concerts/ConcertCard";
-import ConcertList from "../components/Concerts/ConcertList";
+import { ConcertProps } from "../../components/Concerts/ConcertCard";
+import ConcertList from "../../components/Concerts/ConcertList";
 
 export default () => {
   const { t } = useTranslation(["Concerts18", "Concerts"]);
