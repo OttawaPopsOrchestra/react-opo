@@ -4,6 +4,7 @@ import styled from "styled-components/macro";
 import DateTime, { DateTimeProps } from "./DateTime";
 import { BREAKPOINT_MOBILE } from "../../constants/constants";
 import ActionButton from "./ActionButton";
+import { useTranslation } from "react-i18next";
 
 const ConcertCardStyles = styled(Card)`
   display: flex;
@@ -40,18 +41,20 @@ export type ConcertProps = {
 };
 
 export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
+  const { t } = useTranslation("Concerts");
+
   const lastConcertDate = timeDates?.[timeDates?.length - 1];
   const hasEventPassed = lastConcertDate
     ? new Date(lastConcertDate.date).getTime() < Date.now()
     : false;
 
-  console.log("👀: lastConcertDate", lastConcertDate);
-  if (lastConcertDate?.date) {
-    console.log(
-      "👀: new Date(lastConcertDate.date).getTime()",
-      new Date(lastConcertDate?.date).getTime()
-    );
-  }
+  const cancelled = description?.includes(t("cancelled"));
+  const disabled = hasEventPassed || cancelled;
+  const actionButtonTitle = cancelled
+    ? t("cancelledShort")
+    : hasEventPassed
+    ? t("eventPassed")
+    : t("buyTickets");
 
   return (
     <ConcertCardStyles>
@@ -71,16 +74,8 @@ export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <ActionButton link="" name="Read More" />
-          {hasEventPassed ? (
-            <ActionButton
-              link=""
-              name="This Event Has Passed"
-              disabled={true}
-            />
-          ) : (
-            <ActionButton link="" name="Buy Tickets" />
-          )}
+          <ActionButton link="" name={t("readMore")} />
+          <ActionButton link="" name={actionButtonTitle} disabled={disabled} />
         </CardActions>
       </div>
     </ConcertCardStyles>

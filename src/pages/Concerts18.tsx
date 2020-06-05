@@ -4,7 +4,7 @@ import { ConcertProps } from "../components/Concerts/ConcertCard";
 import ConcertList from "../components/Concerts/ConcertList";
 
 export default () => {
-  const { t } = useTranslation("Concerts18");
+  const { t } = useTranslation(["Concerts18", "Concerts"]);
 
   const concerts = [
     {
@@ -18,8 +18,8 @@ export default () => {
     },
     {
       imgPath: "img/concerts-full/2018-2019/SATSDetail.png",
-      title: "Video Game Symphony2",
-      description: "Blah blah description",
+      title: t("satsTitle"),
+      description: t("cancelled"),
       timeDates: [],
     },
     {
