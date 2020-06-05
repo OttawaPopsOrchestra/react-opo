@@ -24,15 +24,17 @@ export default () => {
     },
     {
       imgPath: "img/concerts-full/2018-2019/StarWarsDetail.png",
-      title: "Video Game Symphony3",
-      description: "Blah blah description",
-      timeDates: [],
+      title: t("starWarsTitle"),
+      timeDates: [
+        { date: t("starWarsConcert1Date"), time: t("starWarsConcert1Time") },
+        { date: t("starWarsconcert2Date"), time: t("starWarsconcert2Time") },
+        { date: t("starWarsconcert3Date"), time: t("starWarsconcert3Time") },
+      ],
     },
     {
       imgPath: "img/concerts-full/2018-2019/ToTDetail.png",
-      title: "Video Game Symphony3",
-      description: "Blah blah description",
-      timeDates: [],
+      title: t("totTitle"),
+      timeDates: [{ date: t("totConcert1Date"), time: t("totConcert1Time") }],
     },
   ] as ConcertProps[];
 

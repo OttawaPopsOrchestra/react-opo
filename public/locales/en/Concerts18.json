@@ -6,5 +6,18 @@
   "disneyconcert2Date": "May 18, 2019",
   "disneyconcert2Time": "7:30PM",
 
-  "satsTitle": "Storytime at the Symphony"
+  "satsTitle": "Storytime at the Symphony",
+
+  "starWarsTitle": "The Music of Star Wars",
+  "starWarsDescription": "This December, Ottawa Pops Orchestra (OPO) channels the Force to bring you three epic evenings filled with the music of Star Wars. Join us as OPO celebrates the musical legacy of John Williams and his contributions to one of the most enduring film franchises of all time with a program that will excite new and old fans alike! Program suitable for all ages - families with young children encouraged to attend!",
+  "starWarsConcert1Date": "December 21, 2018",
+  "starWarsConcert1Time": "7:30PM",
+  "starWarsconcert2Date": "December 22, 2018",
+  "starWarsconcert2Time": "7:30PM",
+  "starWarsconcert3Date": "December 23, 2018",
+  "starWarsconcert3Time": "2:30PM",
+
+  "totTitle": "Trick or Toccata",
+  "totConcert1Date": "October 23, 2018",
+  "totConcert1Time": "7:30PM"
 }

@@ -6,5 +6,18 @@
   "disneyconcert2Date": "le 18 mai 2019",
   "disneyconcert2Time": "19 h 30",
 
-  "satsTitle": "Contes à la Symphonie"
+  "satsTitle": "Contes à la Symphonie",
+
+  "starWarsTitle": "La Musique de Star Wars",
+  "starWarsDescription": "This December, Ottawa Pops Orchestra (OPO) channels the Force to bring you three epic evenings filled with the music of Star Wars. Join us as OPO celebrates the musical legacy of John Williams and his contributions to one of the most enduring film franchises of all time with a program that will excite new and old fans alike! Program suitable for all ages - families with young children encouraged to attend!",
+  "starWarsConcert1Date": "le 21 décembre 2018",
+  "starWarsConcert1Time": "19 h 30",
+  "starWarsconcert2Date": "le 22 décembre 2018",
+  "starWarsconcert2Time": "19 h 30",
+  "starWarsconcert3Date": "le 23 décembre 2018",
+  "starWarsconcert3Time": "14 h 30",
+
+  "totTitle": "Trick or Toccata",
+  "totConcert1Date": "le 23 octobre 2018",
+  "totConcert1Time": "19 h 30"
 }
