@@ -36,5 +36,11 @@ export default () => {
     },
   ] as ConcertProps[];
 
-  return <ConcertList concerts={concerts} />;
+  return (
+    <ConcertList
+      concerts={concerts}
+      imgPath="/img/concert_banner_2.jpg"
+      title="Concerts 2018 - 2019"
+    />
+  );
 };

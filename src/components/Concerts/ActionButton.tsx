@@ -14,7 +14,8 @@ const ReadMoreStyledButton = styled(Button)`
   }
 
   &&& {
-    &:hover {
+    &:hover,
+    &:disabled {
       background-color: ${maroon};
 
       a {
@@ -25,9 +26,17 @@ const ReadMoreStyledButton = styled(Button)`
   border: 2px ${maroon} solid !important;
 `;
 
-export default ({ link, name }: { link: string; name: string }) => {
+export default ({
+  link,
+  name,
+  disabled = false,
+}: {
+  link: string;
+  name: string;
+  disabled?: boolean;
+}) => {
   return (
-    <ReadMoreStyledButton>
+    <ReadMoreStyledButton disabled={disabled}>
       <Link to={`/${link}`}>{name}</Link>
     </ReadMoreStyledButton>
   );

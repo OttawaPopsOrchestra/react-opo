@@ -6,3 +6,6 @@ export const BREAKPOINT_DESKTOP = 1200;
 
 export const FONT_SIZE_EXTRA_SMALL = 12;
 export const FONT_SIZE_SMALL = 18;
+export const FONT_SIZE_MEDIUM = 24;
+export const FONT_SIZE_LARGE = 30;
+export const FONT_SIZE_EXTRA_LARGE = 40;

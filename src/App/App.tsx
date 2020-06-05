@@ -22,7 +22,11 @@ function App() {
           <Route exact={true} path="/about" component={AboutUs} />
           <Route exact={true} path="/2018-2019" component={Concerts18} />
           <Route exact={true} path="/2019-2020">
-            <ConcertList concerts={concerts19_20} />
+            <ConcertList
+              concerts={concerts19_20}
+              imgPath="/img/concert_banner_2.jpg"
+              title="Concerts 2019 - 2020"
+            />
           </Route>
           <Route exact={true} path="/orchestra" component={AboutUs} />
           <Route exact={true} path="/community" component={AboutUs} />

@@ -28,7 +28,7 @@ const ConcertCardStyles = styled(Card)`
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
-    width: 30em;
+    width: 100vw;
   }
 `;
 
@@ -40,6 +40,19 @@ export type ConcertProps = {
 };
 
 export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
+  const lastConcertDate = timeDates?.[timeDates?.length - 1];
+  const hasEventPassed = lastConcertDate
+    ? new Date(lastConcertDate.date).getTime() < Date.now()
+    : false;
+
+  console.log("👀: lastConcertDate", lastConcertDate);
+  if (lastConcertDate?.date) {
+    console.log(
+      "👀: new Date(lastConcertDate.date).getTime()",
+      new Date(lastConcertDate?.date).getTime()
+    );
+  }
+
   return (
     <ConcertCardStyles>
       <img src={imgPath} alt={title} />
@@ -58,8 +71,16 @@ export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <ActionButton link="/" name="Read More" />
-          <ActionButton link="/" name="Buy Tickets" />
+          <ActionButton link="" name="Read More" />
+          {hasEventPassed ? (
+            <ActionButton
+              link=""
+              name="This Event Has Passed"
+              disabled={true}
+            />
+          ) : (
+            <ActionButton link="" name="Buy Tickets" />
+          )}
         </CardActions>
       </div>
     </ConcertCardStyles>
