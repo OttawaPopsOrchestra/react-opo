@@ -10,7 +10,7 @@ const ConcertsListStyles = styled.div`
   background-color: #f5f5f5;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32em, 1fr));
-  padding: ${TITLE_HEIGHT / 2}px 8em 0em;
+  padding: ${TITLE_HEIGHT / 2}px 5em 0em;
   grid-gap: 2em;
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
