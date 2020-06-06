@@ -14,8 +14,10 @@ export default () => {
     },
     {
       imgPath: "img/concerts/concerts-full/2019-2020/BroadwayDetail.png",
-      title: t("vgsTitle"),
-      timeDates: [{ date: t("vgsConcert1Date"), time: t("vgsConcert1Time") }],
+      title: t("broadwayTitle"),
+      timeDates: [
+        { date: t("broadwayConcert1Date"), time: t("broadwayConcert1Time") },
+      ],
     },
     {
       imgPath: "img/concerts/concerts-full/2019-2020/HMW2Detail.png",

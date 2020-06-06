@@ -25,7 +25,7 @@ const FooterStyles = styled.div`
   .col1,
   .col2,
   .col3 {
-    padding: 2em 5em;
+    padding: 3em 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -148,7 +148,12 @@ export default () => {
         <SubscribeButton />
         <div className="socialMedia">
           {socialMedia.map(({ label, icon, link }) => (
-            <IconButton color="inherit" aria-label={label} href={`${link}`}>
+            <IconButton
+              key={label}
+              color="inherit"
+              aria-label={label}
+              href={`${link}`}
+            >
               {icon}
             </IconButton>
           ))}
@@ -160,7 +165,7 @@ export default () => {
         </Typography>
         <Divider />
         {boxOfficeInfo.map((item) => (
-          <Typography variant="h6" gutterBottom>
+          <Typography key={item} variant="h6" gutterBottom>
             {item}
           </Typography>
         ))}

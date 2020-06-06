@@ -66,18 +66,9 @@ export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
   const lastConcertDateString = isFrench
     ? concertFrenchStrToDate(lastConcertDate?.date || "")
     : lastConcertDate?.date || "";
-  console.log("👀: lastConcertDateString", lastConcertDateString);
   const hasEventPassed = lastConcertDateString
     ? new Date(lastConcertDateString).getTime() < Date.now()
     : false;
-
-  if (lastConcertDate) {
-    console.log("👀: lastConcertDate", lastConcertDate);
-    console.log(
-      "👀: new Date(lastConcertDate.date).getTime()",
-      new Date(lastConcertDate.date).getTime()
-    );
-  }
 
   const cancelled = description?.includes(t("cancelled"));
   const disabled = hasEventPassed || cancelled;
