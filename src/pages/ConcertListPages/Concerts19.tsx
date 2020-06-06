@@ -1,21 +1,21 @@
 import React from "react";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { ConcertProps } from "../../components/Concerts/ConcertCard";
 import ConcertList from "../../components/Concerts/ConcertList";
 
 export default () => {
-  // const { t } = useTranslation(["Concerts18", "Concerts"]);
+  const { t } = useTranslation(["Concerts19", "Concerts"]);
 
   const concerts = [
     {
       imgPath: "img/concerts-full/2019-2020/VGSDetail.jpeg",
-      title: "Video Game Symphony",
-      description: "Blah blah description",
+      title: t("vgsTitle"),
+      timeDates: [{ date: t("vgsConcert1Date"), time: t("vgsConcert1Time") }],
     },
     {
       imgPath: "img/concerts-full/2019-2020/BroadwayDetail.png",
-      title: "Video Game Symphony2",
-      description: "Blah blah description",
+      title: t("vgsTitle"),
+      timeDates: [{ date: t("vgsConcert1Date"), time: t("vgsConcert1Time") }],
     },
     {
       imgPath: "img/concerts-full/2019-2020/HMW2Detail.png",

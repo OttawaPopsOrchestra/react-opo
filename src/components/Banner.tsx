@@ -1,10 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import {
-  FONT_SIZE_EXTRA_LARGE,
-  BREAKPOINT_MOBILE,
-  FONT_SIZE_SMALL,
-} from "../constants/constants";
+import { FONT_SIZE_SMALL, BREAKPOINT_TABTOP } from "../constants/constants";
 
 export const TITLE_HEIGHT = 100;
 
@@ -18,7 +14,7 @@ const BannerStyles = styled.div`
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: ${FONT_SIZE_EXTRA_LARGE + 2}px;
+    font-size: 2vw;
     background-color: black;
     padding: 0 ${TITLE_HEIGHT}px;
     height: ${TITLE_HEIGHT}px;
@@ -30,11 +26,10 @@ const BannerStyles = styled.div`
     object-fit: cover;
     width: 100%;
     height: ${TITLE_HEIGHT * 4}px;
-    filter: grayscale(100%);
     border-bottom: 10px black solid;
   }
 
-  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+  @media (max-width: ${BREAKPOINT_TABTOP}px) {
     .title {
       font-size: ${FONT_SIZE_SMALL}px;
       padding: 0 ${TITLE_HEIGHT / 4}px;

@@ -67,9 +67,9 @@ export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
           <Typography variant="h6" color="textSecondary" component="p">
             {description}
           </Typography>
-          <Typography variant="h6" color="textSecondary" component="p">
+          <Typography variant="h6" component={"span"} color="textSecondary">
             {timeDates?.map((dateTime) => (
-              <DateTime {...dateTime} />
+              <DateTime key={dateTime.date} {...dateTime} />
             ))}
           </Typography>
         </CardContent>
