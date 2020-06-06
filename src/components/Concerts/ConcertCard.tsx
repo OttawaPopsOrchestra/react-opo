@@ -5,6 +5,8 @@ import DateTime, { DateTimeProps } from "./DateTime";
 import { BREAKPOINT_MOBILE } from "../../constants/constants";
 import ActionButton from "./ActionButton";
 import { useTranslation } from "react-i18next";
+import { getCurrentLanguage } from "../Navbar/LanguageSelector";
+import { concertFrenchStrToDate } from "../../utils/dateTimeUtils";
 
 const ConcertCardStyles = styled(Card)`
   display: flex;
@@ -30,6 +32,22 @@ const ConcertCardStyles = styled(Card)`
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
     width: 100vw;
+
+    .cardText {
+      grid-template-rows: 150px 120px;
+    }
+
+    .MuiCardActions-root {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      grid-row-gap: 10px;
+    }
+
+    /* disable auto left padding when next action button */
+    .MuiCardActions-spacing > :not(:first-child) {
+      margin-left: 0px;
+    }
   }
 `;
 
@@ -43,10 +61,23 @@ export type ConcertProps = {
 export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
   const { t } = useTranslation("Concerts");
 
+  const isFrench = getCurrentLanguage() === "fr";
   const lastConcertDate = timeDates?.[timeDates?.length - 1];
-  const hasEventPassed = lastConcertDate
-    ? new Date(lastConcertDate.date).getTime() < Date.now()
+  const lastConcertDateString = isFrench
+    ? concertFrenchStrToDate(lastConcertDate?.date || "")
+    : lastConcertDate?.date || "";
+  console.log("👀: lastConcertDateString", lastConcertDateString);
+  const hasEventPassed = lastConcertDateString
+    ? new Date(lastConcertDateString).getTime() < Date.now()
     : false;
+
+  if (lastConcertDate) {
+    console.log("👀: lastConcertDate", lastConcertDate);
+    console.log(
+      "👀: new Date(lastConcertDate.date).getTime()",
+      new Date(lastConcertDate.date).getTime()
+    );
+  }
 
   const cancelled = description?.includes(t("cancelled"));
   const disabled = hasEventPassed || cancelled;
@@ -57,7 +88,7 @@ export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
     : t("buyTickets");
 
   return (
-    <ConcertCardStyles>
+    <ConcertCardStyles elevation={5}>
       <img src={imgPath} alt={title} />
       <div className="cardText">
         <CardContent>

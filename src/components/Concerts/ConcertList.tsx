@@ -5,17 +5,19 @@ import ConcertCard, {
 } from "../../components/Concerts/ConcertCard";
 import { BREAKPOINT_MOBILE } from "../../constants/constants";
 import Banner, { TITLE_HEIGHT } from "../Banner";
+import { lighterGrey } from "../../constants/colors";
 
 const ConcertsListStyles = styled.div`
-  background-color: #f5f5f5;
+  background-color: ${lighterGrey};
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32em, 1fr));
-  padding: ${TITLE_HEIGHT / 2}px 5em 0em;
+  padding: ${TITLE_HEIGHT / 2}px 5em;
   grid-gap: 2em;
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
     grid-template-columns: auto;
     padding: 0em !important;
+    grid-gap: 10px;
   }
 `;
 
