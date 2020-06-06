@@ -94,13 +94,11 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
   return (
     <SwipeableDrawer
       anchor="left"
-      disableDiscovery={true}
-      disableSwipeToOpen={false}
       open={open}
       onClose={closeDrawer}
       onOpen={openDrawer}
     >
-      <LeftDrawerStyles>
+      <LeftDrawerStyles tabIndex={0} role="button" onClick={closeDrawer}>
         <Link to="/">
           <img
             id="logo"
