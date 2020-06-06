@@ -2,7 +2,11 @@ import React from "react";
 import { Card, CardContent, Typography, CardActions } from "@material-ui/core";
 import styled from "styled-components/macro";
 import DateTime, { DateTimeProps } from "./DateTime";
-import { BREAKPOINT_MOBILE } from "../../constants/constants";
+import {
+  BREAKPOINT_MOBILE,
+  FONT_SIZE_MEDIUM,
+  FONT_SIZE_SMALL,
+} from "../../constants/constants";
 import ActionButton from "./ActionButton";
 import { useTranslation } from "react-i18next";
 import { getCurrentLanguage } from "../TopBar/LanguageSelector";
@@ -14,6 +18,23 @@ const ConcertCardStyles = styled(Card)`
   margin: 2em auto 0;
   width: 32em;
 
+  .title {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    color: white;
+    background-color: black;
+    height: ${FONT_SIZE_MEDIUM * 2}px;
+    width: 80%;
+    text-align: center;
+
+    .MuiTypography-h5 {
+      font-size: ${FONT_SIZE_MEDIUM}px;
+      font-weight: 700;
+      line-height: ${FONT_SIZE_MEDIUM * 2}px;
+    }
+  }
+
   .cardText {
     display: grid;
     grid-template-rows: 150px 80px;
@@ -23,6 +44,7 @@ const ConcertCardStyles = styled(Card)`
     width: inherit;
     height: auto;
     align-self: center;
+    border-bottom: 8px black solid;
   }
 
   .MuiCardActions-root {
@@ -32,6 +54,19 @@ const ConcertCardStyles = styled(Card)`
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
     width: 100vw;
+
+    .title {
+      height: ${FONT_SIZE_SMALL * 2}px;
+
+      .MuiTypography-h5 {
+        font-size: ${FONT_SIZE_SMALL}px;
+        line-height: ${FONT_SIZE_SMALL * 2}px;
+      }
+    }
+
+    img {
+      border-bottom: 5px black solid;
+    }
 
     .cardText {
       grid-template-rows: 150px 120px;
@@ -83,9 +118,11 @@ export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
       <img src={imgPath} alt={title} />
       <div className="cardText">
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {title}
-          </Typography>
+          <div className="title">
+            <Typography gutterBottom variant="h5" component="h2">
+              {title}
+            </Typography>
+          </div>
           <Typography variant="h6" color="textSecondary" component="p">
             {description}
           </Typography>
