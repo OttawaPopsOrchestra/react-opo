@@ -16,7 +16,7 @@ const ConcertsListStyles = styled.div`
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
     grid-template-columns: auto;
-    padding: 0em !important;
+    padding: 0em 0em 2em !important;
     grid-gap: 10px;
   }
 `;
