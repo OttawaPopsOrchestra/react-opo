@@ -8,17 +8,17 @@ export default () => {
 
   const concerts = [
     {
-      imgPath: "img/concerts-full/2019-2020/VGSDetail.jpeg",
+      imgPath: "img/concerts/concerts-full/2019-2020/VGSDetail.jpeg",
       title: t("vgsTitle"),
       timeDates: [{ date: t("vgsConcert1Date"), time: t("vgsConcert1Time") }],
     },
     {
-      imgPath: "img/concerts-full/2019-2020/BroadwayDetail.png",
+      imgPath: "img/concerts/concerts-full/2019-2020/BroadwayDetail.png",
       title: t("vgsTitle"),
       timeDates: [{ date: t("vgsConcert1Date"), time: t("vgsConcert1Time") }],
     },
     {
-      imgPath: "img/concerts-full/2019-2020/HMW2Detail.png",
+      imgPath: "img/concerts/concerts-full/2019-2020/HMW2Detail.png",
       title: t("hmwTitle"),
       timeDates: [
         { date: t("hmwConcert1Date"), time: t("hmwConcert1Time") },
@@ -30,7 +30,7 @@ export default () => {
   return (
     <ConcertList
       concerts={concerts}
-      imgPath="/img/concert_banner_2.jpg"
+      imgPath="/img/concerts/concert_banner.jpg"
       title="Concerts 2019 - 2020"
     />
   );

@@ -8,7 +8,7 @@ export default () => {
 
   const concerts = [
     {
-      imgPath: "img/concerts-full/2018-2019/DICDetail.png",
+      imgPath: "img/concerts/concerts-full/2018-2019/DICDetail.png",
       title: t("disneyTitle"),
       description: "",
       timeDates: [
@@ -17,13 +17,13 @@ export default () => {
       ],
     },
     {
-      imgPath: "img/concerts-full/2018-2019/SATSDetail.png",
+      imgPath: "img/concerts/concerts-full/2018-2019/SATSDetail.png",
       title: t("satsTitle"),
       description: t("cancelled"),
       timeDates: [],
     },
     {
-      imgPath: "img/concerts-full/2018-2019/StarWarsDetail.png",
+      imgPath: "img/concerts/concerts-full/2018-2019/StarWarsDetail.png",
       title: t("starWarsTitle"),
       timeDates: [
         { date: t("starWarsConcert1Date"), time: t("starWarsConcert1Time") },
@@ -32,7 +32,7 @@ export default () => {
       ],
     },
     {
-      imgPath: "img/concerts-full/2018-2019/ToTDetail.png",
+      imgPath: "img/concerts/concerts-full/2018-2019/ToTDetail.png",
       title: t("totTitle"),
       timeDates: [{ date: t("totConcert1Date"), time: t("totConcert1Time") }],
     },
@@ -41,7 +41,7 @@ export default () => {
   return (
     <ConcertList
       concerts={concerts}
-      imgPath="/img/concert_banner_2.jpg"
+      imgPath="/img/concerts/concert_banner.jpg"
       title="Concerts 2018 - 2019"
     />
   );

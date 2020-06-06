@@ -102,7 +102,7 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
         <Link to="/">
           <img
             id="logo"
-            src="/img/OPO-Logo-Primary.png"
+            src="/img/logos/OPO-Logo-Primary.png"
             alt="Ottawa Pops Orchestra"
             height="100px"
           />

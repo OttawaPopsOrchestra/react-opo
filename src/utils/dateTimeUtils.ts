@@ -5,7 +5,7 @@ export const concertFrenchStrToDate = (string: string) => {
     return '';
   }
   const parts = string.split(" ");
-  if (parts.length !== 4) throw Error(`Expected 3 parts, got ${parts.length}: "${string}"`);
+  if (parts.length !== 4) throw Error(`Expected 4 parts, got ${parts.length}: "${string}"`);
   const [, date, searchMonth, year] = parts;
   const month = months.indexOf(searchMonth.toLowerCase());
   const numYear = parseInt(year, 10);

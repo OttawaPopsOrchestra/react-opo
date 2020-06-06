@@ -43,7 +43,7 @@ export default () => {
         <Link to="/">
           <img
             id="logo"
-            src="/img/OPO-Logo-Alternate.png"
+            src="/img/logos/OPO-Logo-Alternate.png"
             alt="Ottawa Pops Orchestra"
           />
         </Link>
