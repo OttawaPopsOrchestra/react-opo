@@ -19,8 +19,11 @@ export default () => {
     },
     {
       imgPath: "img/concerts-full/2019-2020/HMW2Detail.png",
-      title: "Video Game Symphony3",
-      description: "Blah blah description",
+      title: t("hmwTitle"),
+      timeDates: [
+        { date: t("hmwConcert1Date"), time: t("hmwConcert1Time") },
+        { date: t("hmwConcert2Date"), time: t("hmwConcert2Time") },
+      ],
     },
   ] as ConcertProps[];
 

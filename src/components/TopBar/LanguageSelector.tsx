@@ -63,6 +63,15 @@ const LanguageSelector = () => {
         keepMounted={true}
         open={Boolean(anchorEl)}
         onClose={handleClose}
+        getContentAnchorEl={null}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
       >
         {Object.entries(LANGUAGES).map(([id, name]) => (
           <MenuItem

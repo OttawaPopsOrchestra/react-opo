@@ -5,7 +5,7 @@ import DateTime, { DateTimeProps } from "./DateTime";
 import { BREAKPOINT_MOBILE } from "../../constants/constants";
 import ActionButton from "./ActionButton";
 import { useTranslation } from "react-i18next";
-import { getCurrentLanguage } from "../Navbar/LanguageSelector";
+import { getCurrentLanguage } from "../TopBar/LanguageSelector";
 import { concertFrenchStrToDate } from "../../utils/dateTimeUtils";
 
 const ConcertCardStyles = styled(Card)`

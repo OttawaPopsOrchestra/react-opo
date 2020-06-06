@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/TopBar/TopBar";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import AboutUs from "../pages/AboutUs";
 // import { useTranslation } from "react-i18next";
