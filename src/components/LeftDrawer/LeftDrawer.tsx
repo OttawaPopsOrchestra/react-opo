@@ -37,19 +37,20 @@ const LeftDrawerStyles = styled(List)`
     align-self: flex-start;
   }
 
-  .active {
+  .active,
+  .active:disabled {
     background-color: ${primaryMaroon};
-    a {
+    opacity: 1 !important;
+
+    a,
+    .MuiListItemIcon-root {
       color: white;
     }
   }
 `;
 
-const isCurrentPage = (title: string, link?: string) => {
-  return (
-    window.location.pathname.includes(title) ||
-    (link && window.location.pathname.includes(link))
-  );
+const isCurrentPage = (link?: string) => {
+  return link && window.location.pathname.includes(link);
 };
 
 type DrawerItem = {
@@ -130,7 +131,8 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
                 <ListItem
                   button
                   key={subTitle}
-                  className={isCurrentPage(subTitle, subLink) ? "active" : ""}
+                  className={isCurrentPage(subLink) ? "active" : ""}
+                  disabled={isCurrentPage(subLink) || false}
                 >
                   <ListItemIcon>
                     <MusicNoteIcon />
@@ -143,7 +145,8 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
             <ListItem
               button
               key={title}
-              className={isCurrentPage(title, link) ? "active" : ""}
+              className={isCurrentPage(link) ? "active" : ""}
+              disabled={isCurrentPage(link) || false}
             >
               <Link to={`/${link}`}>{title}</Link>
             </ListItem>
