@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import styled from "styled-components/macro";
-import { maroon } from "../../constants/colors";
+import { primaryMaroon } from "../../constants/colors";
 import { FONT_SIZE_SMALL } from "../../constants/constants";
 
 const ReadMoreStyledButton = styled(Button)`
   a {
     text-decoration: none;
-    color: ${maroon};
+    color: ${primaryMaroon};
     font-size: ${FONT_SIZE_SMALL - 2}px;
     font-weight: 700;
   }
@@ -16,14 +16,14 @@ const ReadMoreStyledButton = styled(Button)`
   &&& {
     &:hover,
     &:disabled {
-      background-color: ${maroon};
+      background-color: ${primaryMaroon};
 
       a {
         color: white;
       }
     }
   }
-  border: 2px ${maroon} solid !important;
+  border: 2px ${primaryMaroon} solid !important;
 `;
 
 export default ({

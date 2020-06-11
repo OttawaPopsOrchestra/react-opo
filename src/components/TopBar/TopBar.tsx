@@ -5,6 +5,7 @@ import LeftDrawer from "../LeftDrawer/LeftDrawer";
 import { Tooltip, IconButton, AppBar, Toolbar } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import LanguageSelector from "./LanguageSelector";
+import { BREAKPOINT_MOBILE } from "../../constants/constants";
 
 const TopBarStyles = styled(AppBar)`
   #logo {
@@ -18,6 +19,13 @@ const TopBarStyles = styled(AppBar)`
 
   #spacer {
     flex-grow: 1;
+  }
+
+  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    #logo {
+      height: 25px;
+      padding: 0em;
+    }
   }
 `;
 

@@ -7,8 +7,8 @@ import MusicNoteIcon from "@material-ui/icons/MusicNote";
 import styled from "styled-components/macro";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { navBackground } from "../../constants/colors";
 import { ListItemText, Divider } from "@material-ui/core";
+import { primaryMaroon } from "../../constants/colors";
 
 const WIDTH = 280;
 
@@ -17,8 +17,7 @@ const LeftDrawerStyles = styled(List)`
   display: flex;
   flex-direction: column;
   align-items: center !important;
-
-  /* background-color: ${navBackground}; */
+  padding-left: 1em !important;
 
   #logo {
     padding: 1em;
@@ -29,7 +28,6 @@ const LeftDrawerStyles = styled(List)`
   .MuiListItemText-primary {
     color: black;
     text-decoration: none !important;
-    /* text-transform: uppercase; */
     font-size: 18px;
     font-weight: 300 !important;
   }
@@ -38,7 +36,21 @@ const LeftDrawerStyles = styled(List)`
     padding-left: 16px !important;
     align-self: flex-start;
   }
+
+  .active {
+    background-color: ${primaryMaroon};
+    a {
+      color: white;
+    }
+  }
 `;
+
+const isCurrentPage = (title: string, link?: string) => {
+  return (
+    window.location.pathname.includes(title) ||
+    (link && window.location.pathname.includes(link))
+  );
+};
 
 type DrawerItem = {
   title: string;
@@ -79,7 +91,10 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
     },
     {
       title: t("community"),
-      link: "community",
+      subMenu: [
+        { title: t("studentMatinees"), link: "student-matinees" },
+        { title: t("stories"), link: "stories" },
+      ],
     },
     {
       title: t("contact"),
@@ -112,7 +127,11 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
             <React.Fragment key={title}>
               <ListItemText primary={title} className="principleMenu" />
               {subMenu.map(({ title: subTitle, link: subLink }) => (
-                <ListItem button key={subTitle}>
+                <ListItem
+                  button
+                  key={subTitle}
+                  className={isCurrentPage(subTitle, subLink) ? "active" : ""}
+                >
                   <ListItemIcon>
                     <MusicNoteIcon />
                   </ListItemIcon>
@@ -121,7 +140,11 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
               ))}
             </React.Fragment>
           ) : (
-            <ListItem button key={title}>
+            <ListItem
+              button
+              key={title}
+              className={isCurrentPage(title, link) ? "active" : ""}
+            >
               <Link to={`/${link}`}>{title}</Link>
             </ListItem>
           )

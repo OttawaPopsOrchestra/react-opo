@@ -64,14 +64,15 @@ const FooterStyles = styled.div`
       width: 80%;
 
       img {
-        padding-top: 2em;
+        padding-top: 1em;
+        height: 50px;
       }
     }
 
     .col1,
     .col2,
     .col3 {
-      padding: 2em 0em;
+      padding: 1em 0em;
     }
 
     .col2 {
@@ -86,10 +87,10 @@ const FooterStyles = styled.div`
     }
 
     .col3 {
-      padding: 2em 1.5em;
+      padding: 1em 1.5em;
 
       h5 {
-        padding-bottom: 10px;
+        padding-bottom: 0px;
       }
     }
     h6 {

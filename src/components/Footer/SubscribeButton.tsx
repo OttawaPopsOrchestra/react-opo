@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components/macro";
 import { Button } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
-import { maroon } from "../../constants/colors";
+import { primaryMaroon } from "../../constants/colors";
 import { FONT_SIZE_SMALL, BREAKPOINT_MOBILE } from "../../constants/constants";
 import SendIcon from "@material-ui/icons/Send";
 
 const SubscribeButtonStyles = styled(Button)`
   &&& {
     color: white;
-    background-color: ${maroon};
+    background-color: ${primaryMaroon};
     font-size: ${FONT_SIZE_SMALL}px;
     padding: 10px 15px;
 
@@ -19,10 +19,10 @@ const SubscribeButtonStyles = styled(Button)`
 
     &:hover {
       background-color: white;
-      color: ${maroon};
+      color: ${primaryMaroon};
     }
 
-    border: 2px ${maroon} solid !important;
+    border: 2px ${primaryMaroon} solid !important;
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
