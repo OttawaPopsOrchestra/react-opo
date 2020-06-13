@@ -9,8 +9,7 @@ import {
 } from "../../constants/constants";
 import ActionButton from "./ActionButton";
 import { useTranslation } from "react-i18next";
-import { getCurrentLanguage } from "../TopBar/LanguageSelector";
-import { concertFrenchStrToDate } from "../../utils/dateTimeUtils";
+import { hasDatePassed, getDateObject } from "../../utils/dateTimeUtils";
 
 const ConcertCardStyles = styled(Card)`
   display: flex;
@@ -57,6 +56,7 @@ const ConcertCardStyles = styled(Card)`
 
     .title {
       height: ${FONT_SIZE_SMALL * 2}px;
+      width: 95%;
 
       .MuiTypography-h5 {
         font-size: ${FONT_SIZE_SMALL}px;
@@ -90,22 +90,27 @@ export type ConcertProps = {
   imgPath: string;
   title: string;
   description?: string;
-  timeDates?: DateTimeProps[];
+  timeDates: DateTimeProps[];
+  buyTickets?: string;
 };
 
-export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
+export default ({
+  imgPath,
+  title,
+  description,
+  timeDates,
+  buyTickets,
+}: ConcertProps) => {
   const { t } = useTranslation("Concerts");
 
-  const isFrench = getCurrentLanguage() === "fr";
-  const lastConcertDate = timeDates?.[timeDates?.length - 1];
-  const lastConcertDateString = isFrench
-    ? concertFrenchStrToDate(lastConcertDate?.date || "")
-    : lastConcertDate?.date || "";
-  const hasEventPassed = lastConcertDateString
-    ? new Date(lastConcertDateString).getTime() < Date.now()
-    : false;
-
   const cancelled = description?.includes(t("cancelled"));
+  let hasEventPassed = false;
+  if (!cancelled) {
+    const lastConcertDateString = timeDates[timeDates.length - 1]?.date || "";
+    const lastConcertDate = getDateObject(lastConcertDateString);
+    hasEventPassed = hasDatePassed(lastConcertDate);
+  }
+
   const disabled = hasEventPassed || cancelled;
   const actionButtonTitle = cancelled
     ? t("cancelledShort")
@@ -134,7 +139,11 @@ export default ({ imgPath, title, description, timeDates }: ConcertProps) => {
         </CardContent>
         <CardActions>
           <ActionButton link="" name={t("readMore")} />
-          <ActionButton link="" name={actionButtonTitle} disabled={disabled} />
+          <ActionButton
+            link={buyTickets || ""}
+            name={actionButtonTitle}
+            disabled={disabled}
+          />
         </CardActions>
       </div>
     </ConcertCardStyles>

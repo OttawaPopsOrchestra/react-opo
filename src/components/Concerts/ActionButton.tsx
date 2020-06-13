@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import styled from "styled-components/macro";
 import { primaryMaroon } from "../../constants/colors";
 import { FONT_SIZE_SMALL } from "../../constants/constants";
 
-const ReadMoreStyledButton = styled(Button)`
+const StyledButton = styled(Button)`
   a {
     text-decoration: none;
     color: ${primaryMaroon};
@@ -36,8 +36,8 @@ export default ({
   disabled?: boolean;
 }) => {
   return (
-    <ReadMoreStyledButton disabled={disabled}>
-      <Link to={`/${link}`}>{name}</Link>
-    </ReadMoreStyledButton>
+    <StyledButton disabled={disabled}>
+      <a href={link}>{name}</a>
+    </StyledButton>
   );
 };

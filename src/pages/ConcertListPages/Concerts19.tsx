@@ -10,14 +10,30 @@ export default () => {
     {
       imgPath: "img/concerts/concerts-full/2019-2020/VGSDetail.jpeg",
       title: t("vgsTitle"),
-      timeDates: [{ date: t("vgsConcert1Date"), time: t("vgsConcert1Time") }],
+      timeDates: [
+        {
+          date: t("vgsConcert1Date"),
+          time: t("vgsConcert1Time"),
+          ticketLink:
+            "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventInfo?ticketCode=GS%3ACP%3AC1920%3ACT0320N%3A&linkID=centrepointe&shopperContext",
+        },
+      ],
+      buyTickets:
+        "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventInfo?ticketCode=GS%3ACP%3AC1920%3ACT0320N%3A&linkID=centrepointe&shopperContext",
     },
     {
       imgPath: "img/concerts/concerts-full/2019-2020/BroadwayDetail.png",
       title: t("broadwayTitle"),
       timeDates: [
-        { date: t("broadwayConcert1Date"), time: t("broadwayConcert1Time") },
+        {
+          date: t("broadwayConcert1Date"),
+          time: t("broadwayConcert1Time"),
+          ticketLink:
+            "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=CT0516N&linkID=centrepointe&shopperContext=undefined&caller=&appCode=",
+        },
       ],
+      buyTickets:
+        "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=CT0516N&linkID=centrepointe&shopperContext=undefined&caller=&appCode=",
     },
     {
       imgPath: "img/concerts/concerts-full/2019-2020/HMW2Detail.png",

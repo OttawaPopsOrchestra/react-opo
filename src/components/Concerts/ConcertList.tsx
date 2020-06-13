@@ -6,6 +6,7 @@ import ConcertCard, {
 import { BREAKPOINT_MOBILE } from "../../constants/constants";
 import Banner, { TITLE_HEIGHT } from "../Banner";
 import { lighterGrey } from "../../constants/colors";
+import { getDateObject, hasDatePassed } from "../../utils/dateTimeUtils";
 
 const ConcertsListStyles = styled.div`
   background-color: ${lighterGrey};
@@ -30,14 +31,43 @@ export default ({
   imgPath: string;
   title: string;
 }) => {
+  const sortedConcerts = orderConcerts(concerts);
+
   return (
     <>
       <Banner imgPath={imgPath} title={title} />
       <ConcertsListStyles>
-        {concerts.map((concert: ConcertProps) => {
+        {sortedConcerts.map((concert: ConcertProps) => {
           return <ConcertCard key={concert.title} {...concert} />;
         })}
       </ConcertsListStyles>
     </>
   );
 };
+
+function orderConcerts(concerts: ConcertProps[]): ConcertProps[] {
+  let passedConcerts = [] as ConcertProps[];
+  let futureConcerts = [] as ConcertProps[];
+
+  concerts.forEach((concert) => {
+    const lastConcertDateString =
+      concert.timeDates[concert.timeDates.length - 1]?.date || "";
+    const lastConcertDate = getDateObject(lastConcertDateString);
+    const hasEventPassed = hasDatePassed(lastConcertDate);
+    hasEventPassed
+      ? passedConcerts.push(concert)
+      : futureConcerts.push(concert);
+  });
+
+  const sortByDate = (a, b) => {
+    const dateA = getDateObject(a.timeDates?.[0].date);
+    const dateB = getDateObject(b.timeDates?.[0].date);
+
+    return dateA.getTime() - dateB.getTime();
+  };
+
+  const sortedPassedConcerts = passedConcerts.sort(sortByDate);
+  const sortedFutureConcerts = futureConcerts.sort(sortByDate);
+
+  return sortedFutureConcerts.concat(sortedPassedConcerts);
+}
