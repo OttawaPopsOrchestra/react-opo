@@ -37,6 +37,7 @@ const ConcertCardStyles = styled(Card)`
   .cardText {
     display: grid;
     grid-template-rows: 150px 80px;
+    width: 95%;
   }
 
   img {
@@ -56,7 +57,6 @@ const ConcertCardStyles = styled(Card)`
 
     .title {
       height: ${FONT_SIZE_SMALL * 2}px;
-      width: 95%;
 
       .MuiTypography-h5 {
         font-size: ${FONT_SIZE_SMALL}px;
@@ -92,6 +92,7 @@ export type ConcertProps = {
   description?: string;
   timeDates: DateTimeProps[];
   buyTickets?: string;
+  readMore?: string;
 };
 
 export default ({
@@ -100,6 +101,7 @@ export default ({
   description,
   timeDates,
   buyTickets,
+  readMore,
 }: ConcertProps) => {
   const { t } = useTranslation("Concerts");
 
@@ -138,7 +140,7 @@ export default ({
           </Typography>
         </CardContent>
         <CardActions>
-          <ActionButton link="" name={t("readMore")} />
+          <ActionButton link={readMore || ""} name={t("readMore")} />
           <ActionButton
             link={buyTickets || ""}
             name={actionButtonTitle}

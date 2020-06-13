@@ -8,6 +8,7 @@ import HomePage from "../pages/HomePage";
 import Footer from "../components/Footer/Footer";
 import Concerts18 from "../pages/ConcertListPages/Concerts18";
 import Concerts19 from "../pages/ConcertListPages/Concerts19";
+import ConcertSingle from "../components/Concerts/ConcertSingle";
 
 function App() {
   // const { t } = useTranslation("Navbar");
@@ -25,6 +26,12 @@ function App() {
           <Route exact={true} path="/community" component={AboutUs} />
           <Route exact={true} path="/contact" component={AboutUs} />
           <Route exact={true} path="/covid" component={AboutUs} />
+
+          <Route
+            exact={true}
+            path="/2019-2020/videogamesymphony"
+            component={ConcertSingle}
+          />
         </Switch>
         <Footer />
       </BrowserRouter>

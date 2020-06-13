@@ -20,6 +20,7 @@ export default () => {
       ],
       buyTickets:
         "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventInfo?ticketCode=GS%3ACP%3AC1920%3ACT0320N%3A&linkID=centrepointe&shopperContext",
+      readMore: "/2019-2020/videogamesymphony",
     },
     {
       imgPath: "img/concerts/concerts-full/2019-2020/BroadwayDetail.png",
