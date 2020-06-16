@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components/macro";
 import { BREAKPOINT_MOBILE, FONT_SIZE_MEDIUM } from "../../constants/constants";
 import { FONT_SIZE_LARGE } from "../../constants/constants";
-// import ActionButtonMaroon from "../Buttons/ActionButtonMaroon";
-// import { useTranslation } from "react-i18next";
+import ActionButtonMaroon from "../Buttons/ActionButtonMaroon";
+import ShareButtons from "../Buttons/ShareButtons";
+import { useTranslation } from "react-i18next";
 import { ConcertProps } from "./ConcertCard";
-// import { getDateObject, hasDatePassed } from "../../utils/dateTimeUtils";
+import { getDateObject, hasDatePassed } from "../../utils/dateTimeUtils";
 import DateTime from "./DateTime";
+import MeridianAddressInfo from "./MeridianAddressInfo";
 // import { primaryMaroon } from "../../constants/colors";
 
 const ConcertSingleStyles = styled.div`
@@ -23,28 +25,40 @@ const ConcertSingleStyles = styled.div`
 
     .generalInfoGrid {
       display: grid;
-      /* grid-template-columns: 50% 50%; */
-      width: 40%;
+      grid-template-columns: 50% 50%;
+      width: 50%;
     }
 
     img {
-      max-width: 60%;
+      max-width: 50%;
       width: 100%;
     }
 
     .generalInfo {
       background-color: black;
       color: white;
-      padding: 3em 2em;
+      padding: 3em;
+
+      .buyTicketsButton {
+        button {
+          width: 100%;
+        }
+      }
 
       .infoHeader {
-        font-weight: 700;
-        font-size: ${FONT_SIZE_LARGE}px;
+        font-weight: 900;
+        font-size: ${FONT_SIZE_LARGE - 2}px;
+        padding-bottom: 5px;
       }
 
       .info {
         padding-bottom: 1em;
-        font-size: ${FONT_SIZE_MEDIUM - 2}px;
+        font-size: ${FONT_SIZE_MEDIUM - 4}px;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
 
         /* Override DateTime styles */
         div[class^="DateTime"] {
@@ -76,6 +90,15 @@ const ConcertSingleStyles = styled.div`
   }
 `;
 
+const HeaderInfo = ({ header, info }: { header: string; info: any }) => {
+  return (
+    <>
+      <div className="infoHeader">{header}</div>
+      <div className="info">{info}</div>
+    </>
+  );
+};
+
 export default ({
   imgPath,
   title,
@@ -83,21 +106,21 @@ export default ({
   timeDates,
   buyTickets,
 }: ConcertProps) => {
-  // const { t } = useTranslation("Concerts");
-  // const cancelled = description?.includes(t("cancelled"));
-  // let hasEventPassed = false;
-  // if (!cancelled) {
-  //   const lastConcertDateString = timeDates[timeDates.length - 1]?.date || "";
-  //   const lastConcertDate = getDateObject(lastConcertDateString);
-  //   hasEventPassed = hasDatePassed(lastConcertDate);
-  // }
+  const { t } = useTranslation("Concerts");
+  const cancelled = description?.includes(t("cancelled"));
+  let hasEventPassed = false;
+  if (!cancelled) {
+    const lastConcertDateString = timeDates[timeDates.length - 1]?.date || "";
+    const lastConcertDate = getDateObject(lastConcertDateString);
+    hasEventPassed = hasDatePassed(lastConcertDate);
+  }
 
-  // const disabled = hasEventPassed || cancelled;
-  // const actionButtonTitle = cancelled
-  //   ? t("cancelledShort")
-  //   : hasEventPassed
-  //   ? t("eventPassed")
-  //   : t("buyTickets");
+  const disabled = hasEventPassed || cancelled;
+  const actionButtonTitle = cancelled
+    ? t("cancelledShort")
+    : hasEventPassed
+    ? t("eventPassed")
+    : t("buyTickets");
 
   return (
     <ConcertSingleStyles>
@@ -106,33 +129,30 @@ export default ({
         <img src={imgPath} alt={title} title={title} />
         <div className="generalInfoGrid">
           <div className="generalInfo">
-            <div className="infoHeader">When</div>
-            <div className="info">
-              {" "}
-              {timeDates?.map((dateTime) => (
+            <HeaderInfo
+              header="When"
+              info={timeDates?.map((dateTime) => (
                 <DateTime key={dateTime.date} {...dateTime} />
               ))}
-            </div>
-
-            <div className="infoHeader">Location</div>
-            <div className="info">datetime</div>
-
-            <div className="infoHeader">Where</div>
-            <div className="info">datetime</div>
-
-            <div className="infoHeader">Language of the Event</div>
-            <div className="info">datetime</div>
-
-            <div className="infoHeader">Suggested Age</div>
-            <div className="info">datetime</div>
-          </div>
-          {/* <div className="generalInfo">
-            <ActionButtonMaroon
-              link={buyTickets || ""}
-              name={actionButtonTitle}
-              disabled={disabled}
             />
-          </div> */}
+            <HeaderInfo header={t("where")} info={<MeridianAddressInfo />} />
+            <HeaderInfo header={t("language")} info={t("lang-val")} />
+            <HeaderInfo header={t("age")} info={t("age-val")} />
+          </div>
+          <div className="generalInfo">
+            <HeaderInfo header={t("price")} info="datetime" />
+            <div className="buyTicketsButton info">
+              <ActionButtonMaroon
+                link={buyTickets || ""}
+                name={actionButtonTitle}
+                disabled={disabled}
+              />
+            </div>
+            <HeaderInfo
+              header="Share"
+              info={<ShareButtons url={window.location.href} size={50} />}
+            />
+          </div>
         </div>
       </div>
     </ConcertSingleStyles>
