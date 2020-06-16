@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, Typography, CardActions } from "@material-ui/core";
+import { Card, CardContent, CardActions } from "@material-ui/core";
 import styled from "styled-components/macro";
 import DateTime, { DateTimeProps } from "./DateTime";
 import {
@@ -7,7 +7,7 @@ import {
   FONT_SIZE_MEDIUM,
   FONT_SIZE_SMALL,
 } from "../../constants/constants";
-import ActionButton from "./ActionButton";
+import ActionButton from "../Buttons/ActionButton";
 import { useTranslation } from "react-i18next";
 import { hasDatePassed, getDateObject } from "../../utils/dateTimeUtils";
 
@@ -26,18 +26,20 @@ const ConcertCardStyles = styled(Card)`
     height: ${FONT_SIZE_MEDIUM * 2}px;
     width: 80%;
     text-align: center;
+    font-size: ${FONT_SIZE_MEDIUM}px;
+    font-weight: 700;
+    line-height: ${FONT_SIZE_MEDIUM * 2}px;
+  }
 
-    .MuiTypography-h5 {
-      font-size: ${FONT_SIZE_MEDIUM}px;
-      font-weight: 700;
-      line-height: ${FONT_SIZE_MEDIUM * 2}px;
-    }
+  .description {
+    color: grey;
+    font-size: ${FONT_SIZE_SMALL + 2}px;
+    text-align: center;
   }
 
   .cardText {
     display: grid;
     grid-template-rows: 150px 80px;
-    width: 95%;
   }
 
   img {
@@ -57,11 +59,8 @@ const ConcertCardStyles = styled(Card)`
 
     .title {
       height: ${FONT_SIZE_SMALL * 2}px;
-
-      .MuiTypography-h5 {
-        font-size: ${FONT_SIZE_SMALL}px;
-        line-height: ${FONT_SIZE_SMALL * 2}px;
-      }
+      font-size: ${FONT_SIZE_SMALL}px;
+      line-height: ${FONT_SIZE_SMALL * 2}px;
     }
 
     img {
@@ -93,6 +92,9 @@ export type ConcertProps = {
   timeDates: DateTimeProps[];
   buyTickets?: string;
   readMore?: string;
+  location?: string;
+  language?: string;
+  age?: string;
 };
 
 export default ({
@@ -125,19 +127,13 @@ export default ({
       <img src={imgPath} alt={title} />
       <div className="cardText">
         <CardContent>
-          <div className="title">
-            <Typography gutterBottom variant="h5" component="h2">
-              {title}
-            </Typography>
-          </div>
-          <Typography variant="h6" color="textSecondary" component="p">
+          <div className="title">{title}</div>
+          <div className="description">
             {description}
-          </Typography>
-          <Typography variant="h6" component={"span"} color="textSecondary">
             {timeDates?.map((dateTime) => (
               <DateTime key={dateTime.date} {...dateTime} />
             ))}
-          </Typography>
+          </div>
         </CardContent>
         <CardActions>
           <ActionButton link={readMore || ""} name={t("readMore")} />

@@ -3,5 +3,10 @@
   "cancelled": "Ce Concert Est Annulé",
   "cancelledShort": "Annulé",
   "eventPassed": "événement a déjà eu lieu",
-  "buyTickets": "Achetez vos billets"
+  "buyTickets": "Achetez vos billets",
+
+  "meridian": "Meridian @ Centerpointe Theatres`",
+  "meridian-address": "101 Centrepointe Dr",
+  "meridian-city": "Ottawa (Ontario) K2G 5K7",
+  "meridian-phone": "Phone: 613-580-2700"
 }

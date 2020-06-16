@@ -11,8 +11,15 @@ export type DateTimeProps = {
 };
 
 const DateTimeStyles = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
+  /* display: grid;
+  grid-template-columns: auto auto; */
+  display: flex;
+  padding-bottom: 2px;
+  justify-content: center;
+
+  .date {
+    padding-right: 1em;
+  }
 
   a {
     display: grid;
@@ -39,7 +46,7 @@ export default ({ date, time, ticketLink }: DateTimeProps) => {
   const DateAndTime = () => {
     return (
       <>
-        <div className="iconWithString">
+        <div className="iconWithString date">
           <EventIcon />
           {date}
         </div>
