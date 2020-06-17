@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { BREAKPOINT_MOBILE, FONT_SIZE_MEDIUM } from "../../constants/constants";
-import { FONT_SIZE_LARGE } from "../../constants/constants";
+import {
+  BREAKPOINT_MOBILE,
+  FONT_SIZE_LARGE,
+  FONT_SIZE_MEDIUM,
+  FONT_SIZE_SMALL,
+} from "../../constants/constants";
 import ActionButtonMaroon from "../Buttons/ActionButtonMaroon";
 import ShareButtons from "../Buttons/ShareButtons";
 import { useTranslation } from "react-i18next";
@@ -9,7 +13,6 @@ import { ConcertProps } from "./ConcertCard";
 import { getDateObject, hasDatePassed } from "../../utils/dateTimeUtils";
 import DateTime from "./DateTime";
 import MeridianAddressInfo from "./MeridianAddressInfo";
-// import { primaryMaroon } from "../../constants/colors";
 
 const ConcertSingleStyles = styled.div`
   .title {
@@ -20,17 +23,16 @@ const ConcertSingleStyles = styled.div`
   }
 
   .generalInfoBlock {
-    display: flex;
     padding: 0 5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
 
     .generalInfoGrid {
       display: grid;
-      grid-template-columns: 50% 50%;
-      width: 50%;
+      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     }
 
     img {
-      max-width: 50%;
       width: 100%;
     }
 
@@ -79,12 +81,30 @@ const ConcertSingleStyles = styled.div`
 
     .generalInfoBlock {
       padding: 0 1em;
-      flex-direction: column;
+      grid-template-columns: auto;
 
-      img,
-      .generalInfo {
+      .generalInfoGrid {
+        grid-template-columns: auto;
+      }
+
+      img {
         width: 100%;
-        max-width: 100%;
+      }
+
+      .generalInfo:first-child {
+        padding-top: 2em;
+      }
+
+      .generalInfo {
+        padding: 0em 2em;
+
+        .infoHeader {
+          font-size: ${FONT_SIZE_MEDIUM - 2}px;
+        }
+
+        .info {
+          font-size: ${FONT_SIZE_SMALL}px;
+        }
       }
     }
   }
