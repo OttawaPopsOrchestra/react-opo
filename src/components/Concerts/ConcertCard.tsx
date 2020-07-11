@@ -51,7 +51,7 @@ const ConcertCardStyles = styled(Card)`
 
   .MuiCardActions-root {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
@@ -95,6 +95,8 @@ export type ConcertProps = {
   location?: string;
   language?: string;
   age?: string;
+  price?: string;
+  spotify?: string;
 };
 
 export default ({
@@ -108,12 +110,12 @@ export default ({
   const { t } = useTranslation("Concerts");
 
   const cancelled = description?.includes(t("cancelled"));
-  let hasEventPassed = false;
-  if (!cancelled) {
-    const lastConcertDateString = timeDates[timeDates.length - 1]?.date || "";
-    const lastConcertDate = getDateObject(lastConcertDateString);
-    hasEventPassed = hasDatePassed(lastConcertDate);
-  }
+  const hasEventPassed = cancelled ? false : getHasEventPassed(timeDates);
+  const yearOfEvent = cancelled
+    ? null
+    : getDateObject(timeDates[timeDates.length - 1]?.date).getFullYear();
+  const shouldHideReadMoreButton =
+    !cancelled && yearOfEvent && yearOfEvent > 2018;
 
   const disabled = hasEventPassed || cancelled;
   const actionButtonTitle = cancelled
@@ -136,7 +138,9 @@ export default ({
           </div>
         </CardContent>
         <CardActions>
-          <ActionButton link={readMore || ""} name={t("readMore")} />
+          {shouldHideReadMoreButton && (
+            <ActionButton link={readMore || ""} name={t("readMore")} />
+          )}
           <ActionButton
             link={buyTickets || ""}
             name={actionButtonTitle}
@@ -147,3 +151,9 @@ export default ({
     </ConcertCardStyles>
   );
 };
+
+function getHasEventPassed(timeDates) {
+  const lastConcertDateString = timeDates[timeDates.length - 1]?.date || "";
+  const lastConcertDate = getDateObject(lastConcertDateString);
+  return hasDatePassed(lastConcertDate);
+}

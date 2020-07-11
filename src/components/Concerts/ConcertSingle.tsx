@@ -15,6 +15,8 @@ import DateTime from "./DateTime";
 import MeridianAddressInfo from "./MeridianAddressInfo";
 
 const ConcertSingleStyles = styled.div`
+  padding: 0 5em;
+
   .title {
     text-align: center;
     padding: 1em 0;
@@ -23,7 +25,6 @@ const ConcertSingleStyles = styled.div`
   }
 
   .generalInfoBlock {
-    padding: 0 5em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
 
@@ -74,13 +75,26 @@ const ConcertSingleStyles = styled.div`
     }
   }
 
+  .concert-description {
+    padding-top: 2em;
+    font-size: ${FONT_SIZE_MEDIUM - 2}px;
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 380px;
+      padding: 2em 0;
+    }
+  }
+
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    padding: 0 1em;
+
     .title {
       font-size: ${FONT_SIZE_LARGE}px;
     }
 
     .generalInfoBlock {
-      padding: 0 1em;
       grid-template-columns: auto;
 
       .generalInfoGrid {
@@ -125,6 +139,8 @@ export default ({
   description,
   timeDates,
   buyTickets,
+  price,
+  spotify,
 }: ConcertProps) => {
   const { t } = useTranslation("Concerts");
   const cancelled = description?.includes(t("cancelled"));
@@ -160,7 +176,7 @@ export default ({
             <HeaderInfo header={t("age")} info={t("age-val")} />
           </div>
           <div className="generalInfo">
-            <HeaderInfo header={t("price")} info="datetime" />
+            {price && <HeaderInfo header={t("price")} info={price} />}
             <div className="buyTicketsButton info">
               <ActionButtonMaroon
                 link={buyTickets || ""}
@@ -174,6 +190,18 @@ export default ({
             />
           </div>
         </div>
+      </div>
+      <div className="concert-description">
+        <div>{description}</div>
+        {spotify && (
+          <div>
+            <iframe
+              title="playlist"
+              src={spotify}
+              allow="autoplay; encrypted-media"
+            ></iframe>
+          </div>
+        )}
       </div>
     </ConcertSingleStyles>
   );
