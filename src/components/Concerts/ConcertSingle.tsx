@@ -40,7 +40,7 @@ const ConcertSingleStyles = styled.div`
     .generalInfo {
       background-color: black;
       color: white;
-      padding: 3em;
+      padding: 2em 3em;
 
       .buyTicketsButton {
         button {

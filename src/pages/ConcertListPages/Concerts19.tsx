@@ -35,6 +35,7 @@ export default () => {
       ],
       buyTickets:
         "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=CT0516N&linkID=centrepointe&shopperContext=undefined&caller=&appCode=",
+      readMore: "/2019-2020/popsonbroadway",
     },
     {
       imgPath: "img/concerts/concerts-full/2019-2020/HMW2Detail.png",
@@ -43,6 +44,7 @@ export default () => {
         { date: t("hmwConcert1Date"), time: t("hmwConcert1Time") },
         { date: t("hmwConcert2Date"), time: t("hmwConcert2Time") },
       ],
+      readMore: "/2019-2020/hmw",
     },
   ] as ConcertProps[];
 

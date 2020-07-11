@@ -8,6 +8,8 @@ import Footer from "../components/Footer/Footer";
 import Concerts18 from "../pages/ConcertListPages/Concerts18";
 import Concerts19 from "../pages/ConcertListPages/Concerts19";
 import VGS from "../pages/ConcertSinglePages/Concerts19/VGS";
+import Broadway from "../pages/ConcertSinglePages/Concerts19/Broadway";
+import HMW from "../pages/ConcertSinglePages/Concerts19/HMW";
 
 function App() {
   return (
@@ -23,12 +25,23 @@ function App() {
           <Route exact={true} path="/community" component={AboutUs} />
           <Route exact={true} path="/contact" component={AboutUs} />
           <Route exact={true} path="/covid" component={AboutUs} />
-
+          {/* 2019 - 2020 concert pages */}
           <Route
             exact={true}
             path="/2019-2020/videogamesymphony"
             component={VGS}
           />
+          <Route
+            exact={true}
+            path="/2019-2020/videogamesymphony"
+            component={VGS}
+          />
+          <Route
+            exact={true}
+            path="/2019-2020/popsonbroadway"
+            component={Broadway}
+          />
+          <Route exact={true} path="/2019-2020/hmw" component={HMW} />
         </Switch>
         <Footer />
       </BrowserRouter>
