@@ -50,7 +50,7 @@ const LeftDrawerStyles = styled(List)`
 `;
 
 const isCurrentPage = (link?: string) => {
-  return link && window.location.pathname.includes(link);
+  return link && window.location.pathname === `/${link}`;
 };
 
 type DrawerItem = {
