@@ -108,7 +108,6 @@ export default ({
   readMore,
 }: ConcertProps) => {
   const { t } = useTranslation("Concerts");
-  console.log("👀: readMore", readMore);
 
   const cancelled = description?.includes(t("cancelled"));
   const hasEventPassed = cancelled ? false : getHasEventPassed(timeDates);
