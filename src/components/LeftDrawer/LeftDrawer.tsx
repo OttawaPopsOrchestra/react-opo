@@ -78,7 +78,7 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
     {
       title: t("concerts"),
       subMenu: [
-        { title: "2018 - 2019", link: "2018-2019" },
+        // ARCHIVED { title: "2018 - 2019", link: "2018-2019" },
         { title: "2019 - 2020", link: "2019-2020" },
         { title: t("seasonTickets"), link: "seasonTickets" },
       ],
