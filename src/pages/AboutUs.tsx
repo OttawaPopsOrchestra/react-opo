@@ -67,6 +67,7 @@ export default () => {
         className="jarallax"
         data-speed="0.5"
         data-jarallax-video="mp4:/video/Blue_B_1.mp4"
+        style={{ backgroundImage: "url(/video/Blue_B_1.mp4)" }}
       >
         <div className="title">{aboutTitle}</div>
         {aboutText.map((paragraph, index) => {
