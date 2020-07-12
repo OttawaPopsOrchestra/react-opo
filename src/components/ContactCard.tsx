@@ -75,7 +75,7 @@ const ContactCardStyles = styled.div`
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
-    width: 90vw;
+    width: 100%;
 
     .contact-card {
       .header {
