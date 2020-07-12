@@ -10,9 +10,14 @@ const StyledIframe = styled.div`
   }
 `;
 
-export default ({ link }) => {
+type PlaylistProps = {
+  id?: string;
+  link: string;
+};
+
+export default ({ id, link }: PlaylistProps) => {
   return (
-    <StyledIframe>
+    <StyledIframe id={id || ""}>
       <iframe
         title="playlist"
         src={link}

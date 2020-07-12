@@ -40,7 +40,10 @@ export default () => {
         <p>{t("how-5")}</p>
 
         <p>{t("playlist")}</p>
-        <Playlist link="https://open.spotify.com/embed/playlist/6wXiN6S4626e3hdcMOb0fx" />
+        <Playlist
+          id="playlist"
+          link="https://open.spotify.com/embed/playlist/6wXiN6S4626e3hdcMOb0fx"
+        />
       </>
     );
   };

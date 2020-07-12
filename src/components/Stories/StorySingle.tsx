@@ -5,7 +5,11 @@ import { secondaryPurple } from "../../constants/colors";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import ActionButtonPurple from "../Buttons/ActionButtonPurple";
 import MusicNoteIcon from "@material-ui/icons/MusicNote";
-import { FONT_SIZE_SMALL, FONT_SIZE_MEDIUM } from "../../constants/constants";
+import {
+  FONT_SIZE_SMALL,
+  FONT_SIZE_MEDIUM,
+  BREAKPOINT_MOBILE,
+} from "../../constants/constants";
 
 const StorySingleStyles = styled.div`
   display: flex;
@@ -70,6 +74,10 @@ const StorySingleStyles = styled.div`
       font-weight: 700;
       font-size: ${FONT_SIZE_MEDIUM}px;
     }
+  }
+
+  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    width: 90vw;
   }
 `;
 
