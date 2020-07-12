@@ -6,6 +6,7 @@ import {
   FONT_SIZE_SMALL,
   FONT_SIZE_MEDIUM,
   FONT_SIZE_EXTRA_LARGE,
+  BREAKPOINT_MOBILE,
 } from "../constants/constants";
 
 const CovidStyles = styled.div`
@@ -53,6 +54,16 @@ const CovidStyles = styled.div`
       margin: 0 auto;
       width: 560px;
       height: 340px;
+    }
+  }
+
+  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    .content {
+      padding: 0;
+      width: 90%;
+    }
+    iframe {
+      width: 100% !important;
     }
   }
 `;
