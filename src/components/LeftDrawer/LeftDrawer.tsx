@@ -24,23 +24,30 @@ const LeftDrawerStyles = styled(List)`
   }
 
   a,
-  .principleMenu,
-  .MuiListItemText-primary {
+  .principleMenu > .MuiTypography-body1,
+  .subMenu {
     color: black;
     text-decoration: none !important;
-    font-size: 18px;
-    font-weight: 300 !important;
+    font-size: 18px !important;
+    font-family: "Quicksand", sans-serif !important;
+  }
+
+  .subMenu {
+    font-weight: 400 !important;
   }
 
   .principleMenu {
-    padding-left: 16px !important;
     align-self: flex-start;
+    padding-left: 16px !important;
+    padding-top: 1em;
   }
 
   .active,
   .active:disabled {
     background-color: ${primaryMaroon};
     opacity: 1 !important;
+    border-radius: 10px;
+    margin-right: 10px;
 
     a,
     .MuiListItemIcon-root {
@@ -123,7 +130,7 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
             height="100px"
           />
         </Link>
-        {drawerItems.map(({ title, link, subMenu }) =>
+        {drawerItems.map(({ title, link, subMenu }, index) =>
           subMenu ? (
             <React.Fragment key={title}>
               <ListItemText primary={title} className="principleMenu" />
@@ -131,7 +138,9 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
                 <ListItem
                   button
                   key={subTitle}
-                  className={isCurrentPage(subLink) ? "active" : ""}
+                  className={
+                    isCurrentPage(subLink) ? "active subMenu" : "subMenu"
+                  }
                   disabled={isCurrentPage(subLink) || false}
                 >
                   <ListItemIcon>
@@ -147,6 +156,9 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
               key={title}
               className={isCurrentPage(link) ? "active" : ""}
               disabled={isCurrentPage(link) || false}
+              style={
+                drawerItems[index - 1]?.subMenu ? { marginTop: "1em" } : {}
+              }
             >
               <Link to={`/${link}`}>{title}</Link>
             </ListItem>
