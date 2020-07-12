@@ -27,6 +27,12 @@ const StorySingleStyles = styled.div`
     font-weight: 700;
   }
 
+  .intro {
+    font-weight: 400;
+    margin-bottom: 2em;
+    font-size: ${FONT_SIZE_SMALL}px;
+  }
+
   .info {
     display: flex;
     justify-content: center;
@@ -78,6 +84,10 @@ const StorySingleStyles = styled.div`
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
     width: 90vw;
+
+    button {
+      width: 100%;
+    }
   }
 `;
 
@@ -85,6 +95,7 @@ type StorySingleProps = {
   title: string;
   date: string;
   author: string;
+  intro?: string;
   imgPath: string;
   content: any;
 };
@@ -93,6 +104,7 @@ export default ({
   title,
   date,
   author,
+  intro,
   imgPath,
   content,
 }: StorySingleProps) => {
@@ -105,6 +117,7 @@ export default ({
         <PersonOutlineIcon />
         {author}
       </div>
+      {intro && <div className="intro">{intro}</div>}
       <img src={imgPath} alt={title} />
       <ActionButtonPurple
         link="#playlist"
@@ -116,6 +129,8 @@ export default ({
         }
       />
       <div className="content">{content()}</div>
+      {/* TODO SETUP NEWSLETTER LINK WHEN DONE IN FOOTER */}
+      {/* <div className="newsletter"></div> */}
     </StorySingleStyles>
   );
 };

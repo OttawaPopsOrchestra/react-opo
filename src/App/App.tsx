@@ -13,6 +13,7 @@ import HMW from "../pages/ConcertSinglePages/Concerts19/HMW";
 import Contact from "../pages/Contact";
 import Stories from "../pages/Stories";
 import Story1 from "../pages/Stories/Story1";
+import TwinFlames from "../pages/Stories/TwinFlames";
 
 function App() {
   return (
@@ -45,7 +46,13 @@ function App() {
             component={Broadway}
           />
           <Route exact={true} path="/2019-2020/hmw" component={HMW} />
+          {/* stories */}
           <Route exact={true} path="/stories/story1" component={Story1} />
+          <Route
+            exact={true}
+            path="/stories/twinflames"
+            component={TwinFlames}
+          />
         </Switch>
         <Footer />
       </BrowserRouter>
