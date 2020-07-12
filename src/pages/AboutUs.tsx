@@ -4,8 +4,20 @@ import { getCurrentLanguage } from "../components/TopBar/LanguageSelector";
 import { BREAKPOINT_MOBILE } from "../constants/constants";
 
 const AboutUsStyles = styled.div`
-  .jarallax {
-    height: fit-content;
+  .video-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .title {
@@ -21,13 +33,10 @@ const AboutUsStyles = styled.div`
 
   .aboutBody {
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     width: 75%;
-
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 45rem;
+    margin: 45rem auto 0;
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
@@ -60,39 +69,30 @@ export default () => {
   const aboutTitle = isFrench ? frenchTitle : englishTitle;
   const aboutText = isFrench ? frenchText : englishText;
 
-  fetch("/video/Blue_B_1.mp4").then(function (response) {
-    if (response.status === 206) {
-      window.location.reload();
-    }
-  });
-
   return (
     <AboutUsStyles>
-      <div
-        id="video"
-        className="jarallax"
-        data-speed="0.5"
-        data-jarallax-video="mp4:/video/Blue_B_1.mp4"
-        style={{ backgroundImage: "url(/video/Blue_B_1.mp4)" }}
-      >
-        <div className="title">{aboutTitle}</div>
-        {aboutText.map((paragraph, index) => {
-          return (
-            <div
-              key={index}
-              className="aboutBody"
-              // if last paragraph, add padding to bottom
-              style={
-                index === aboutText.length - 1
-                  ? { paddingBottom: "45rem" }
-                  : { paddingBottom: "0" }
-              }
-            >
-              {paragraph}
-            </div>
-          );
-        })}
+      <div className="video-bg">
+        <video autoPlay muted loop>
+          <source src="./video/Blue_B_1.mp4" type="video/mp4" />
+        </video>
       </div>
+      <div className="title">{aboutTitle}</div>
+      {aboutText.map((paragraph, index) => {
+        return (
+          <div
+            key={index}
+            className="aboutBody"
+            // if last paragraph, add padding to bottom
+            style={
+              index === aboutText.length - 1
+                ? { paddingBottom: "45rem" }
+                : { paddingBottom: "0" }
+            }
+          >
+            {paragraph}
+          </div>
+        );
+      })}
     </AboutUsStyles>
   );
 };
