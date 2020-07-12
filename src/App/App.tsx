@@ -11,6 +11,7 @@ import VGS from "../pages/ConcertSinglePages/Concerts19/VGS";
 import Broadway from "../pages/ConcertSinglePages/Concerts19/Broadway";
 import HMW from "../pages/ConcertSinglePages/Concerts19/HMW";
 import Contact from "../pages/Contact";
+import Stories from "../pages/Stories";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route exact={true} path="/2018-2019" component={Concerts18} />
           <Route exact={true} path="/2019-2020" component={Concerts19} />
           <Route exact={true} path="/orchestra" component={AboutUs} />
-          <Route exact={true} path="/community" component={AboutUs} />
+          <Route exact={true} path="/stories" component={Stories} />
           <Route exact={true} path="/contact" component={Contact} />
           <Route exact={true} path="/covid" component={AboutUs} />
           {/* 2019 - 2020 concert pages */}
