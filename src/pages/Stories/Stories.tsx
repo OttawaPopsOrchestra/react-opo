@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import StoryCard, { StoryCardProps } from "../../components/Stories/StoryCard";
 import styled from "styled-components/macro";
 import { BREAKPOINT_TABTOP } from "../../constants/constants";
 import { useTranslation } from "react-i18next";
 import { getDateObject } from "../../utils/dateTimeUtils";
+import { TextField, IconButton } from "@material-ui/core";
+import ClearIcon from "@material-ui/icons/Clear";
 
 const StoryStyles = styled.div`
   .stories {
     margin: 0 auto;
     padding: 0em 10em;
     font-family: FuturaPTMedium, "Trebuchet MS", Arial, sans-serif !important;
+  }
+
+  .inputWrapper {
+    padding-top: 1em;
+    width: 100%;
   }
 
   @media (max-width: ${BREAKPOINT_TABTOP}px) {
@@ -21,6 +28,27 @@ const StoryStyles = styled.div`
 
 export default () => {
   const { t } = useTranslation("Stories");
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+  const handleClearSearch = () => {
+    setSearchTerm("");
+  };
+
+  useEffect(() => {
+    const handleKeydown = (e) => {
+      if (e.key === "Escape") {
+        handleClearSearch();
+      }
+    };
+    window.addEventListener("keydown", handleKeydown);
+    return () => {
+      window.removeEventListener("keydown", handleKeydown);
+    };
+  }, []);
+
   const stories = [
     {
       imgPath: "/img/stories/story1/Photo 1- Neon Sign.jpg",
@@ -58,11 +86,32 @@ export default () => {
     },
   ];
 
+  const storiesToShow = orderStories(stories).filter(
+    ({ author, title }) =>
+      author.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <StoryStyles>
       <img src={t("banner")} alt={t("header")} width="100%" />
       <div className="stories">
-        {orderStories(stories).map((story) => (
+        <div className="inputWrapper">
+          <TextField
+            variant="outlined"
+            type="text"
+            inputProps={{
+              autoFocus: true,
+            }}
+            value={searchTerm}
+            onChange={handleSearchChange}
+            label={t("search")}
+          />
+          <IconButton disabled={searchTerm === ""} onClick={handleClearSearch}>
+            <ClearIcon />
+          </IconButton>
+        </div>
+        {storiesToShow.map((story) => (
           <StoryCard key={story.title} {...story} />
         ))}
       </div>
