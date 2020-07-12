@@ -71,7 +71,7 @@ export default () => {
 
         <p>
           {t("p3")}
-          <a href="/2019-2019/videogamesymphony">{t("p3_vgs")}</a>
+          <a href="/2019-2020/videogamesymphony">{t("p3_vgs")}</a>
           {t("p3_2")}
           <a href="/2019-2020/popsonbroadway">{t("p3_pob")}</a>
           {t("p3_3")}

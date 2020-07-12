@@ -11,7 +11,7 @@ export default () => {
       <>
         <p className="preview">
           {t("preview")}
-          <a href="/2019-2019/videogamesymphony">{t("vgs")}</a>
+          <a href="/2019-2020/videogamesymphony">{t("vgs")}</a>
           {t("and")}
           <a href="/2019-2020/popsonbroadway">{t("broadway")}</a>
           {t("preview_2")}
