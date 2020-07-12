@@ -60,6 +60,12 @@ export default () => {
   const aboutTitle = isFrench ? frenchTitle : englishTitle;
   const aboutText = isFrench ? frenchText : englishText;
 
+  fetch("/video/Blue_B_1.mp4").then(function (response) {
+    if (response.status === 206) {
+      window.location.reload();
+    }
+  });
+
   return (
     <AboutUsStyles>
       <div
