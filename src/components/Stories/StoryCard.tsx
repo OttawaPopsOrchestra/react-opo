@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { secondaryPurple } from "../../constants/colors";
-import { FONT_SIZE_SMALL, BREAKPOINT_MOBILE } from "../../constants/constants";
+import { FONT_SIZE_SMALL, BREAKPOINT_TABTOP } from "../../constants/constants";
 import { useTranslation } from "react-i18next";
 import { getCurrentLanguage } from "../TopBar/LanguageSelector";
 import ActionButtonPurple from "../Buttons/ActionButtonPurple";
@@ -11,11 +11,11 @@ const StoryCardStyles = styled.div`
   padding: 2em 0;
 
   .storyImage {
-    width: 400px;
+    width: 400px !important;
 
     img {
-      width: 100%;
       border-radius: 10px;
+      width: 400px;
     }
   }
 
@@ -37,7 +37,7 @@ const StoryCardStyles = styled.div`
     }
   }
 
-  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+  @media (max-width: ${BREAKPOINT_TABTOP}px) {
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -56,12 +56,12 @@ const StoryCardStyles = styled.div`
   }
 `;
 
-type StoryCardProps = {
+export type StoryCardProps = {
   imgPath: string;
   title: string;
   preview: string;
   author: string;
-  translate: string;
+  translate?: string;
   date: string;
   readMore: string;
 };
@@ -90,7 +90,7 @@ export default ({
           <b>{t("written")}</b>
           {author}
         </div>
-        {isFrench && (
+        {isFrench && translate && (
           <div className="translate">
             <b>{t("translated")}</b>
             {translate}

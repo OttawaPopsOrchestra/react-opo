@@ -1,4 +1,5 @@
 {
+  "OPO": "Ottawa Pops Orchestra",
   "header": "OPO Stories",
   "description": "Music inspires stories and we want to help tell them. Each week, we’ll be sharing a unique playlist and story chosen by diverse members of our community and we invite you to listen and read along! ",
   "written": "Written By: ",
@@ -9,6 +10,18 @@
   "playlist": "Playlist",
   "newsletter": "Make sure to sign up for our newsletter to never miss a playlist from our Stories Through Music Series.",
   "photoCredits": "Photo Credits: ",
+
+  "story1-title": "The Ottawa Pops Orchestra Presents Stories Through Music Series",
+  "story1-date": "June 8 2020",
+  "story1-preview": "Music inspires stories and we want to help tell them. Each week, we’ll be sharing a unique playlist and story chosen by diverse members of our community and we invite you to listen and read along!",
+
+  "story2-title": "Award-Winning Duo Twin Flames Inspires Audiences Around the World Through Song",
+  "story2-date": "June 21 2020",
+  "story2-preview": "Get to know husband-and-wife duo, Twin Flames, and the music that inspired them from a young age and continues to motivate them as professional artists.",
+
+  "story3-title": "Writer and Epidemiologist Raywat Deonandan Discusses the Transcendence of Identity and Music",
+  "story3-date": "June 29 2020",
+  "story3-preview": "Get to know Epidemiologist, Author and Professor, Raywat Deonandan, as he shares his thoughts on the Transcendence of Identity and Music.",
 
   "story4-title": "Hop on the Ottawa Music Train with City Councillor Jeff Leiper",
   "story4-date": "July 6 2020",
