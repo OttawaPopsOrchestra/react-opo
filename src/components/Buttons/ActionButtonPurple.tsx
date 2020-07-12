@@ -9,12 +9,12 @@ const StyledButton = styled(Button)`
     text-decoration: none;
     font-family: "Helvetica", Helvetica, Arial, sans-serif;
     letter-spacing: 1.8px;
+    color: ${secondaryPurple};
   }
 
   &&& {
     background-color: white;
     border: 2px solid ${secondaryPurple} !important;
-    color: ${secondaryPurple} !important;
 
     font-size: ${FONT_SIZE_EXTRA_SMALL + 2}px;
     font-weight: 700;

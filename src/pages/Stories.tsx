@@ -6,12 +6,16 @@ import { useTranslation } from "react-i18next";
 import { getDateObject } from "../utils/dateTimeUtils";
 
 const StoryStyles = styled.div`
-  margin: 0 auto;
-  padding: 0em 10em;
-  font-family: FuturaPTMedium, "Trebuchet MS", Arial, sans-serif !important;
+  .stories {
+    margin: 0 auto;
+    padding: 0em 10em;
+    font-family: FuturaPTMedium, "Trebuchet MS", Arial, sans-serif !important;
+  }
 
   @media (max-width: ${BREAKPOINT_TABTOP}px) {
-    padding: 0;
+    .stories {
+      padding: 0;
+    }
   }
 `;
 
@@ -24,7 +28,7 @@ export default () => {
       preview: t("story1-preview"),
       author: t("OPO"),
       date: t("story1-date"),
-      readMore: "/",
+      readMore: "/stories/story1",
     },
     {
       imgPath: "/img/stories/story2/Twin Flames Photo 1.JPG",
@@ -32,7 +36,7 @@ export default () => {
       preview: t("story2-preview"),
       author: "Carmen Harris",
       date: t("story2-date"),
-      readMore: "/",
+      readMore: "/stories/twinflames",
     },
     {
       imgPath: "/img/stories/story3/Deonandan_by_Sarah_Mercer_ExtraLarge.jpg",
@@ -41,7 +45,7 @@ export default () => {
       author: "Raywat Deonandan",
       translate: "Alexandre Bigeau",
       date: t("story3-date"),
-      readMore: "/",
+      readMore: "/stories/raywatdeonandan",
     },
     {
       imgPath: "/img/stories/story4/Jeff Leiper - Photo 1.jpg",
@@ -50,15 +54,18 @@ export default () => {
       author: "Jeff Leiper",
       translate: "Mathieu Roy",
       date: t("story4-date"),
-      readMore: "/",
+      readMore: "/stories/jeffleiper",
     },
   ];
 
   return (
     <StoryStyles>
-      {orderStories(stories).map((story) => (
-        <StoryCard key={story.title} {...story} />
-      ))}
+      <img src={t("banner")} alt={t("header")} width="100%" />
+      <div className="stories">
+        {orderStories(stories).map((story) => (
+          <StoryCard key={story.title} {...story} />
+        ))}
+      </div>
     </StoryStyles>
   );
 };
