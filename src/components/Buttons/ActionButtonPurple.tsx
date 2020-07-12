@@ -45,7 +45,7 @@ export default ({
   disabled = false,
 }: {
   link: string;
-  name: string;
+  name: any;
   disabled?: boolean;
 }) => {
   return (

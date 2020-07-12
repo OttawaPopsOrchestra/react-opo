@@ -13,6 +13,7 @@ import { ConcertProps } from "./ConcertCard";
 import { getDateObject, hasDatePassed } from "../../utils/dateTimeUtils";
 import DateTime from "./DateTime";
 import MeridianAddressInfo from "./MeridianAddressInfo";
+import Playlist from "../Playlist";
 
 const ConcertSingleStyles = styled.div`
   padding: 0 5em;
@@ -78,13 +79,6 @@ const ConcertSingleStyles = styled.div`
   .concert-description {
     padding-top: 2em;
     font-size: ${FONT_SIZE_MEDIUM - 2}px;
-
-    iframe {
-      border: 0;
-      width: 100%;
-      height: 380px;
-      padding: 2em 0;
-    }
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
@@ -193,15 +187,7 @@ export default ({
       </div>
       <div className="concert-description">
         <div>{description}</div>
-        {spotify && (
-          <div>
-            <iframe
-              title="playlist"
-              src={spotify}
-              allow="autoplay; encrypted-media"
-            ></iframe>
-          </div>
-        )}
+        {spotify && <Playlist link={spotify} />}
       </div>
     </ConcertSingleStyles>
   );
