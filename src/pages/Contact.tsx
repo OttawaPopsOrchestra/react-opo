@@ -36,18 +36,22 @@ const ContactStyles = styled.div`
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
-    padding: 2em 1em !important;
+    padding: 2em 0em !important;
+    align-items: center;
 
     .pageTitle {
       font-size: ${FONT_SIZE_MEDIUM + 4}px;
       color: ${primaryMaroon};
+      width: 90vw;
     }
 
     .contact {
+      width: 90vw;
       font-size: ${FONT_SIZE_SMALL}px;
     }
 
     .contactGrid {
+      width: 90vw;
       grid-template-columns: auto;
       grid-gap: 10px;
     }
