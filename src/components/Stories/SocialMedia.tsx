@@ -66,7 +66,7 @@ export default ({ share, socialMedias }: SocialMediaProps) => {
       <div className="icons">
         {socialMedias.map(({ icon, link }) => {
           return (
-            <a href={link} target="_blank" rel="noopener noreferrer">
+            <a key={link} href={link} target="_blank" rel="noopener noreferrer">
               {icon}
             </a>
           );

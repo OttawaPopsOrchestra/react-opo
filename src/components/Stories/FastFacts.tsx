@@ -28,7 +28,7 @@ export default ({ title, facts }: { title: string; facts: string[] }) => {
       <div className="fastFactsTitle">{title}</div>
       <ul>
         {facts.map((fact) => (
-          <li>{fact}</li>
+          <li key={fact}>{fact}</li>
         ))}
       </ul>
     </FastFactStyles>

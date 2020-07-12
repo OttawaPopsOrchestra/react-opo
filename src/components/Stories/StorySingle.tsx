@@ -96,7 +96,7 @@ type StorySingleProps = {
   date: string;
   author: string;
   intro?: string;
-  imgPath: string;
+  imgPath: any;
   content: any;
 };
 
@@ -118,7 +118,11 @@ export default ({
         {author}
       </div>
       {intro && <div className="intro">{intro}</div>}
-      <img src={imgPath} alt={title} />
+      {typeof imgPath === "string" ? (
+        <img src={imgPath} alt={title} />
+      ) : (
+        imgPath
+      )}
       <ActionButtonPurple
         link="#playlist"
         name={
