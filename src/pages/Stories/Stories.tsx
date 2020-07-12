@@ -1,9 +1,9 @@
 import React from "react";
-import StoryCard, { StoryCardProps } from "../components/Stories/StoryCard";
+import StoryCard, { StoryCardProps } from "../../components/Stories/StoryCard";
 import styled from "styled-components/macro";
-import { BREAKPOINT_TABTOP } from "../constants/constants";
+import { BREAKPOINT_TABTOP } from "../../constants/constants";
 import { useTranslation } from "react-i18next";
-import { getDateObject } from "../utils/dateTimeUtils";
+import { getDateObject } from "../../utils/dateTimeUtils";
 
 const StoryStyles = styled.div`
   .stories {

@@ -11,7 +11,7 @@ import VGS from "../pages/ConcertSinglePages/Concerts19/VGS";
 import Broadway from "../pages/ConcertSinglePages/Concerts19/Broadway";
 import HMW from "../pages/ConcertSinglePages/Concerts19/HMW";
 import Contact from "../pages/Contact";
-import Stories from "../pages/Stories";
+import Stories from "../pages/Stories/Stories";
 import Story1 from "../pages/Stories/Story1";
 import TwinFlames from "../pages/Stories/TwinFlames";
 import Raywat from "../pages/Stories/Raywat";
