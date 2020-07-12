@@ -62,7 +62,7 @@ const StorySingleStyles = styled.div`
 
   button {
     width: 50%;
-    margin: 0 auto 2em;
+    margin: 0 auto 1em;
   }
 
   .content {

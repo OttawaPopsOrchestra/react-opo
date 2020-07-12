@@ -7,6 +7,7 @@ const PhotoCreditStyles = styled.div`
   position: relative;
   width: 100%;
   margin: 2em 0em;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
 
   img {
     display: block;

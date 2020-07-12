@@ -15,6 +15,7 @@ import Stories from "../pages/Stories";
 import Story1 from "../pages/Stories/Story1";
 import TwinFlames from "../pages/Stories/TwinFlames";
 import Raywat from "../pages/Stories/Raywat";
+import JeffLeiper from "../pages/Stories/JeffLeiper";
 
 function App() {
   return (
@@ -58,6 +59,11 @@ function App() {
             exact={true}
             path="/stories/raywatdeonandan"
             component={Raywat}
+          />
+          <Route
+            exact={true}
+            path="/stories/jeffleiper"
+            component={JeffLeiper}
           />
         </Switch>
         <Footer />
