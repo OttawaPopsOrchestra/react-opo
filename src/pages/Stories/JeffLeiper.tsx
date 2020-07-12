@@ -72,12 +72,7 @@ export default () => {
     date: t("date"),
     author: t("author"),
     intro: t("intro"),
-    imgPath: (
-      <PhotoCredits
-        imgPath="/img/stories/story4/Jeff Leiper - Photo 1.jpg"
-        credit="Sarah Mercer"
-      />
-    ),
+    imgPath: "/img/stories/story4/Jeff Leiper - Photo 1.jpg",
     content,
   };
 
