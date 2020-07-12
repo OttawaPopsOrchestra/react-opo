@@ -16,6 +16,7 @@ import Story1 from "../pages/Stories/Story1";
 import TwinFlames from "../pages/Stories/TwinFlames";
 import Raywat from "../pages/Stories/Raywat";
 import JeffLeiper from "../pages/Stories/JeffLeiper";
+import Covid from "../pages/Covid";
 
 function App() {
   return (
@@ -27,10 +28,9 @@ function App() {
           <Route exact={true} path="/about" component={AboutUs} />
           <Route exact={true} path="/2018-2019" component={Concerts18} />
           <Route exact={true} path="/2019-2020" component={Concerts19} />
-          <Route exact={true} path="/orchestra" component={AboutUs} />
           <Route exact={true} path="/stories" component={Stories} />
           <Route exact={true} path="/contact" component={Contact} />
-          <Route exact={true} path="/covid" component={AboutUs} />
+          <Route exact={true} path="/covid" component={Covid} />
           {/* 2019 - 2020 concert pages */}
           <Route
             exact={true}
