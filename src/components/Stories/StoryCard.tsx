@@ -45,7 +45,11 @@ const StoryCardStyles = styled.div`
 
     .storyImage {
       margin: 0 auto;
-      width: 85vw;
+      width: 100% !important;
+
+      img {
+        width: 100% !important;
+      }
     }
 
     .storyInfo {

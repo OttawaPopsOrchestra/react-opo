@@ -22,6 +22,7 @@ const StoryStyles = styled.div`
   @media (max-width: ${BREAKPOINT_TABTOP}px) {
     .stories {
       padding: 0;
+      width: 90%;
     }
   }
 `;
