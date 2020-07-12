@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { useTranslation } from "react-i18next";
+import { BREAKPOINT_MOBILE } from "../constants/constants";
 
 const PhotoCreditStyles = styled.div`
   position: relative;
@@ -30,6 +31,14 @@ const PhotoCreditStyles = styled.div`
 
   &:hover .credit {
     opacity: 1;
+  }
+
+  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    width: 90vw;
+    .credit {
+      font-size: 14px;
+      padding: 10px;
+    }
   }
 `;
 
