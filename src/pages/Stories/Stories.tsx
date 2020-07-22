@@ -85,6 +85,15 @@ export default () => {
       date: t("story4-date"),
       readMore: "/stories/jeffleiper",
     },
+    {
+      imgPath: "/img/stories/story5/Andrew Ascenzo - Bedford Headshot 003.jpg",
+      title: t("story5-title"),
+      preview: t("story5-preview"),
+      author: "Andrew Ascenzo",
+      translate: "Alexandre Bigeau",
+      date: t("story5-date"),
+      readMore: "/stories/bedfordtrio",
+    },
   ];
 
   const storiesToShow = orderStories(stories).filter(

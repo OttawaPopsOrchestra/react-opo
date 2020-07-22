@@ -80,6 +80,12 @@ const StorySingleStyles = styled.div`
       font-weight: 700;
       font-size: ${FONT_SIZE_MEDIUM}px;
     }
+
+    .sub-header {
+      padding: 1em 0 0.5em;
+      font-weight: 700;
+      font-size: ${FONT_SIZE_MEDIUM - 4}px;
+    }
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
