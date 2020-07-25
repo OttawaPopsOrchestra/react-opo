@@ -9,6 +9,7 @@ import {
 } from "../constants/constants";
 import PhoneIcon from "@material-ui/icons/Phone";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
+import PersonIcon from "@material-ui/icons/Person";
 
 const IMAGE_HEIGHT = 160;
 
@@ -22,6 +23,9 @@ const ContactCardStyles = styled.div`
   .contactImage {
     border-radius: 50%;
     width: ${IMAGE_HEIGHT}px;
+    height: ${IMAGE_HEIGHT}px;
+    object-fit: cover;
+    object-position: 0 5%;
     position: relative;
     margin-bottom: ${IMAGE_HEIGHT / -2}px;
 
@@ -34,12 +38,23 @@ const ContactCardStyles = styled.div`
   .contact-card {
     width: 100%;
     padding-top: ${IMAGE_HEIGHT / 2}px;
+    height: ${IMAGE_HEIGHT}px;
 
     .header {
       display: flex;
       justify-content: center;
       color: ${primaryMaroon};
-      font-size: ${FONT_SIZE_MEDIUM}px;
+      align-items: center;
+
+      .name {
+        font-size: ${FONT_SIZE_MEDIUM - 4}px;
+        max-width: 50%;
+      }
+
+      .title {
+        font-size: ${FONT_SIZE_SMALL}px;
+        max-width: 50%;
+      }
 
       .pipe {
         padding: 0 10px;
@@ -75,7 +90,7 @@ const ContactCardStyles = styled.div`
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
-    width: 100%;
+    width: 90vw;
 
     .contact-card {
       .header {
@@ -103,16 +118,17 @@ type ContactType = {
   title: string;
   phone?: string;
   email: string;
+  imgPath?: string;
 };
 
-export default ({ name, title, phone, email }) => {
+export default ({ name, title, phone, email, imgPath }: ContactType) => {
   return (
     <ContactCardStyles>
-      <img
-        src="/img/contact/mathieu-roy.jpg"
-        className="contactImage"
-        alt={name}
-      />
+      {imgPath ? (
+        <img src={imgPath} className="contactImage" alt={name} />
+      ) : (
+        <PersonIcon className="contactImage" />
+      )}
       <Card className="contact-card" elevation={10}>
         <CardContent>
           <div className="header">

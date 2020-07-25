@@ -32,8 +32,12 @@ const ContactStyles = styled.div`
   .contactGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(32em, 1fr));
-    grid-gap: 2em;
+    grid-row-gap: 2em;
   }
+
+  /* .MuiCardContent-root {
+    padding: 16px 5px;
+  } */
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
     padding: 2em 0em !important;
@@ -67,6 +71,36 @@ export default () => {
       title: t("artisticDirector"),
       phone: "(613) 793 - 3998",
       email: "mathieu.roy@ottawapopsorchestra.ca",
+      imgPath: "/img/contact/mathieu-roy.jpg",
+    },
+    {
+      name: "Carmen Harris",
+      title: t("marketingManager"),
+      email: "carmen.harris@ottawapopsorchestra.ca",
+      imgPath: "/img/contact/Carmen Harris.jpg",
+    },
+    {
+      name: "Lyndon Kirkley",
+      title: t("sponsorshipCoord"),
+      email: "lyndon.kirkley@ottawapopsorchestra.ca",
+    },
+    {
+      name: "Sador Bereketab",
+      title: t("eventsAndSponsCoord"),
+      email: "sador.bereketab@ottawapopsorchestra.ca",
+      imgPath: "/img/contact/Sador Bereketab.png",
+    },
+    {
+      name: "Rachel Ostic",
+      title: t("grantPropManager"),
+      email: "rachel.ostic@ottawapopsorchestra.ca",
+      imgPath: "/img/contact/Rachel Ostic.png",
+    },
+    {
+      name: "Chloe Geller",
+      title: t("librarian"),
+      email: "chloe.geller@ottawapopsorchestra.ca",
+      imgPath: "/img/contact/Chloe Geller.jpg",
     },
   ];
 

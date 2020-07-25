@@ -1,5 +1,11 @@
 {
   "title": "Contactez-nous",
   "contact": "Pour des questions générales, commentaires ou suggestions, veuillez contacter notre bureau administratif à: ",
-  "artisticDirector": "Directeur artistique"
+
+  "artisticDirector": "Directeur artistique",
+  "marketingManager": "Marketing and Communications Manager",
+  "sponsorshipCoord": "Sponsorship Coordinator",
+  "eventsAndSponsCoord": "Events and Sponsorship Coordinator",
+  "grantPropManager": "Grant Proposal Manager",
+  "librarian": "Librarian"
 }
