@@ -3,9 +3,9 @@
   "contact": "Pour des questions générales, commentaires ou suggestions, veuillez contacter notre bureau administratif à: ",
 
   "artisticDirector": "Directeur artistique",
-  "marketingManager": "Marketing and Communications Manager",
-  "sponsorshipCoord": "Sponsorship Coordinator",
-  "eventsAndSponsCoord": "Events and Sponsorship Coordinator",
-  "grantPropManager": "Grant Proposal Manager",
-  "librarian": "Librarian"
+  "marketingManager": "Gestionnaire du marketing et des communications",
+  "sponsorshipCoord": "Coordinateur des commandites",
+  "eventsAndSponsCoord": "Coordinatrice des événements et commandites",
+  "grantPropManager": "Gestionnaire des demandes de subvention",
+  "librarian": "Bibliothécaire"
 }
