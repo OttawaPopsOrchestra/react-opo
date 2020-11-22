@@ -2,13 +2,12 @@ import React, { Dispatch, SetStateAction } from "react";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import MusicNoteIcon from "@material-ui/icons/MusicNote";
 import styled from "styled-components/macro";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { ListItemText, Divider } from "@material-ui/core";
+import { Divider } from "@material-ui/core";
 import { primaryMaroon } from "../../constants/colors";
+import LeftDrawerWithSubItem from "./LeftDrawerWithSubItem";
 
 const WIDTH = 280;
 
@@ -17,10 +16,13 @@ const LeftDrawerStyles = styled(List)`
   display: flex;
   flex-direction: column;
   align-items: center !important;
-  padding-left: 1em !important;
 
   #logo {
     padding: 1em;
+  }
+
+  .item {
+    height: 3em !important;
   }
 
   a,
@@ -36,18 +38,10 @@ const LeftDrawerStyles = styled(List)`
     font-weight: 400 !important;
   }
 
-  .principleMenu {
-    align-self: flex-start;
-    padding-left: 16px !important;
-    padding-top: 1em;
-  }
-
   .active,
   .active:disabled {
     background-color: ${primaryMaroon};
     opacity: 1 !important;
-    border-radius: 10px;
-    margin-right: 10px;
 
     a,
     .MuiListItemIcon-root {
@@ -56,11 +50,11 @@ const LeftDrawerStyles = styled(List)`
   }
 `;
 
-const isCurrentPage = (link?: string) => {
+export const isCurrentPage = (link?: string) => {
   return link && window.location.pathname === `/${link}`;
 };
 
-type DrawerItem = {
+export type DrawerItem = {
   title: string;
   link?: string;
   subMenu?: DrawerItem[];
@@ -121,7 +115,7 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
       onClose={closeDrawer}
       onOpen={openDrawer}
     >
-      <LeftDrawerStyles tabIndex={0} role="button" onClick={closeDrawer}>
+      <LeftDrawerStyles tabIndex={0} role="button">
         <Link to="/">
           <img
             id="logo"
@@ -130,40 +124,33 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
             height="100px"
           />
         </Link>
-        {drawerItems.map(({ title, link, subMenu }, index) =>
-          subMenu ? (
-            <React.Fragment key={title}>
-              <ListItemText primary={title} className="principleMenu" />
-              {subMenu.map(({ title: subTitle, link: subLink }) => (
-                <ListItem
-                  button
-                  key={subTitle}
-                  className={
-                    isCurrentPage(subLink) ? "active subMenu" : "subMenu"
-                  }
-                  disabled={isCurrentPage(subLink) || false}
-                >
-                  <ListItemIcon>
-                    <MusicNoteIcon />
-                  </ListItemIcon>
-                  <Link to={`/${subLink}`}>{subTitle}</Link>
-                </ListItem>
-              ))}
-            </React.Fragment>
+        {drawerItems.map(({ title, link, subMenu }) => {
+          const initialExpanded =
+            (subMenu?.filter(({ link }) => isCurrentPage(link)).length || -1) >
+            0;
+
+          return subMenu ? (
+            <LeftDrawerWithSubItem
+              key={title}
+              title={title}
+              subMenu={subMenu}
+              closeDrawer={closeDrawer}
+              initialExpanded={initialExpanded}
+            />
           ) : (
             <ListItem
               button
               key={title}
-              className={isCurrentPage(link) ? "active" : ""}
+              onClick={closeDrawer}
+              className={isCurrentPage(link) ? "active item" : "item"}
               disabled={isCurrentPage(link) || false}
-              style={
-                drawerItems[index - 1]?.subMenu ? { marginTop: "1em" } : {}
-              }
             >
-              <Link to={`/${link}`}>{title}</Link>
+              <Link style={{ paddingLeft: "1em" }} to={`/${link}`}>
+                {title}
+              </Link>
             </ListItem>
-          )
-        )}
+          );
+        })}
         <Divider />
       </LeftDrawerStyles>
     </SwipeableDrawer>
