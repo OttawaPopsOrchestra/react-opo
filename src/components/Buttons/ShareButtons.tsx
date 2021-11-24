@@ -43,7 +43,13 @@ const ShareButtonStyles = styled.div`
   }
 `;
 
-export default ({ url, size }: { url: string; size: number }) => {
+export default function ShareButtons({
+  url,
+  size,
+}: {
+  url: string;
+  size: number;
+}) {
   return (
     <ShareButtonStyles>
       <EmailShareButton url={url} resetButtonStyle={false}>
@@ -57,4 +63,4 @@ export default ({ url, size }: { url: string; size: number }) => {
       </TwitterShareButton>
     </ShareButtonStyles>
   );
-};
+}

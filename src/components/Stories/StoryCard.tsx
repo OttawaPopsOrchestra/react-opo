@@ -70,7 +70,7 @@ export type StoryCardProps = {
   readMore: string;
 };
 
-export default ({
+export default function StoryCard({
   imgPath,
   title,
   preview,
@@ -78,7 +78,7 @@ export default ({
   translate,
   date,
   readMore,
-}: StoryCardProps) => {
+}: StoryCardProps) {
   const { t } = useTranslation(["Stories", "Concerts"]);
   const isFrench = getCurrentLanguage() === "fr";
 
@@ -108,4 +108,4 @@ export default ({
       </div>
     </StoryCardStyles>
   );
-};
+}

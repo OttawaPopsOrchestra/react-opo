@@ -12,7 +12,7 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import SocialMedia from "../../components/Stories/SocialMedia";
 import PhotoCredits from "../../components/PhotoCredits";
 
-export default () => {
+export default function BedfordTrio() {
   const { t } = useTranslation("BedfordTrio");
 
   const socialMediaProps = {
@@ -131,4 +131,4 @@ export default () => {
   };
 
   return <StorySingle {...props} />;
-};
+}

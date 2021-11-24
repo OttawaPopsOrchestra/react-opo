@@ -99,7 +99,7 @@ const FooterStyles = styled.div`
   }
 `;
 
-export default () => {
+export default function Footer() {
   const { t } = useTranslation("Footer");
 
   const socialMedia = [
@@ -121,8 +121,7 @@ export default () => {
     {
       label: "YouTube",
       icon: <YouTubeIcon />,
-      link:
-        "https://www.youtube.com/channel/UCvD4B1NFC_2HD5jxXl3U-SQ?pbjreload=10",
+      link: "https://www.youtube.com/channel/UCvD4B1NFC_2HD5jxXl3U-SQ?pbjreload=10",
     },
   ];
 
@@ -173,4 +172,4 @@ export default () => {
       </div>
     </FooterStyles>
   );
-};
+}

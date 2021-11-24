@@ -25,7 +25,7 @@ const StyledButton = styled(Button)`
   border: 2px ${primaryMaroon} solid !important;
 `;
 
-export default ({
+export default function ActionButton({
   link,
   name,
   disabled = false,
@@ -33,10 +33,10 @@ export default ({
   link: string;
   name: string;
   disabled?: boolean;
-}) => {
+}) {
   return (
     <StyledButton disabled={disabled}>
       <a href={link}>{name}</a>
     </StyledButton>
   );
-};
+}

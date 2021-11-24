@@ -68,7 +68,7 @@ const CovidStyles = styled.div`
   }
 `;
 
-export default () => {
+export default function Covid() {
   const { t } = useTranslation("Covid");
 
   return (
@@ -125,4 +125,4 @@ export default () => {
       </div>
     </CovidStyles>
   );
-};
+}

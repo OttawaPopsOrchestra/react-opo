@@ -9,7 +9,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import SocialMedia from "../../components/Stories/SocialMedia";
 import PhotoCredits from "../../components/PhotoCredits";
 
-export default () => {
+export default function Raywat() {
   const { t } = useTranslation("Raywat");
 
   const socialMediaProps = {
@@ -67,4 +67,4 @@ export default () => {
   };
 
   return <StorySingle {...props} />;
-};
+}

@@ -29,7 +29,7 @@ const TopBarStyles = styled(AppBar)`
   }
 `;
 
-export default () => {
+export default function TopBar() {
   const [isLeftDrawerOpen, setIsLeftDrawerOpen] = useState(false);
 
   return (
@@ -64,4 +64,4 @@ export default () => {
       </Toolbar>
     </TopBarStyles>
   );
-};
+}

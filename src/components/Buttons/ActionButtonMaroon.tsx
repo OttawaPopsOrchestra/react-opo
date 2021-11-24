@@ -26,7 +26,7 @@ const StyledButton = styled(Button)`
   }
 `;
 
-export default ({
+export default function ActionButtonMaroon({
   link,
   name,
   disabled = false,
@@ -34,10 +34,10 @@ export default ({
   link: string;
   name: string;
   disabled?: boolean;
-}) => {
+}) {
   return (
     <StyledButton disabled={disabled}>
       <a href={link}>{name}</a>
     </StyledButton>
   );
-};
+}

@@ -2,7 +2,7 @@ import React from "react";
 import ConcertSingle from "../../../components/Concerts/ConcertSingle";
 import { useTranslation } from "react-i18next";
 
-export default () => {
+export default function HMW() {
   const { t } = useTranslation(["Concerts", "HMW"]);
 
   const hmwProps = {
@@ -22,4 +22,4 @@ export default () => {
     spotify: "https://open.spotify.com/embed/playlist/1F7ddq9YrPRv71Znwovcdk",
   };
   return <ConcertSingle {...hmwProps} />;
-};
+}

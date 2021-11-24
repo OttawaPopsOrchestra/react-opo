@@ -18,7 +18,7 @@ const StyledDrawerItem = styled.div`
   }
 `;
 
-export default ({
+export default function LeftDrawerWithSubItem({
   title,
   subMenu,
   closeDrawer,
@@ -28,7 +28,7 @@ export default ({
   subMenu: DrawerItem[];
   closeDrawer: () => void;
   initialExpanded: boolean;
-}) => {
+}) {
   const [expanded, setExpanded] = useState(initialExpanded);
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -58,4 +58,4 @@ export default ({
       </Collapse>
     </StyledDrawerItem>
   );
-};
+}

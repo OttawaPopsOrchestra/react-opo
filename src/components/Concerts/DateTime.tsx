@@ -11,8 +11,6 @@ export type DateTimeProps = {
 };
 
 const DateTimeStyles = styled.div`
-  /* display: grid;
-  grid-template-columns: auto auto; */
   display: flex;
   padding-bottom: 2px;
   justify-content: center;
@@ -42,7 +40,7 @@ const DateTimeStyles = styled.div`
   }
 `;
 
-export default ({ date, time, ticketLink }: DateTimeProps) => {
+export default function DateTime({ date, time, ticketLink }: DateTimeProps) {
   const DateAndTime = () => {
     return (
       <>
@@ -69,4 +67,4 @@ export default ({ date, time, ticketLink }: DateTimeProps) => {
       )}
     </DateTimeStyles>
   );
-};
+}

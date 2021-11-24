@@ -63,7 +63,7 @@ const frenchText = [
   "L’OPO est fier de mettre sur pied deux nouvelles initiatives pour les jeunes musiciens et élèves de la région d’Ottawa-Gatineau. D’abord, nous invitions des écoles de la communauté à quelques-unes de nos répétitions générales en fournissant aux enseignants des ressources pédagogiques détaillées et reliées aux concerts, permettant aux élèves de témoigner du fonctionnement d’un orchestre. De plus, nous sommes fiers de présenter la Bourse de développement orchestral qui encourage certains jeunes musiciens, choisit par un panel d’audition, à perfectionner leurs habiletés musicales et acquérir de l’expérience orchestrale professionnelle avec l’OPO.",
 ];
 
-export default () => {
+export default function AboutUs() {
   // Can't use translation files - doesn't work with jarallax effect
   const isFrench = getCurrentLanguage() === "fr";
   const aboutTitle = isFrench ? frenchTitle : englishTitle;
@@ -95,4 +95,4 @@ export default () => {
       })}
     </AboutUsStyles>
   );
-};
+}

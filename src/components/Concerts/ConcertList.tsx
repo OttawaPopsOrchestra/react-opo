@@ -22,7 +22,7 @@ const ConcertsListStyles = styled.div`
   }
 `;
 
-export default ({
+export default function ConcertList({
   concerts,
   imgPath,
   title,
@@ -30,7 +30,7 @@ export default ({
   concerts: ConcertProps[];
   imgPath: string;
   title: string;
-}) => {
+}) {
   const sortedConcerts = orderConcerts(concerts);
 
   return (
@@ -43,7 +43,7 @@ export default ({
       </ConcertsListStyles>
     </>
   );
-};
+}
 
 function orderConcerts(concerts: ConcertProps[]): ConcertProps[] {
   let passedConcerts = [] as ConcertProps[];

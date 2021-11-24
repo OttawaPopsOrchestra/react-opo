@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import StorySingle from "../../components/Stories/StorySingle";
 import Playlist from "../../components/Playlist";
 
-export default () => {
+export default function Story1() {
   const { t } = useTranslation("Story1");
 
   const content = () => {
@@ -57,4 +57,4 @@ export default () => {
   };
 
   return <StorySingle {...props} />;
-};
+}

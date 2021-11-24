@@ -127,7 +127,7 @@ const HeaderInfo = ({ header, info }: { header: string; info: any }) => {
   );
 };
 
-export default ({
+export default function ConcertSingle({
   imgPath,
   title,
   description,
@@ -135,7 +135,7 @@ export default ({
   buyTickets,
   price,
   spotify,
-}: ConcertProps) => {
+}: ConcertProps) {
   const { t } = useTranslation("Concerts");
   const cancelled = description?.includes(t("cancelled"));
   let hasEventPassed = false;
@@ -191,4 +191,4 @@ export default ({
       </div>
     </ConcertSingleStyles>
   );
-};
+}

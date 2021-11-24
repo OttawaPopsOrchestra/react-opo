@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 
 const HomepageStyles = styled.div``;
 
-export default () => {
+export default function HomePage() {
   return (
     <HomepageStyles>
       <img
@@ -14,4 +14,4 @@ export default () => {
       />
     </HomepageStyles>
   );
-};
+}

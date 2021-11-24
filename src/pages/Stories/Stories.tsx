@@ -27,7 +27,7 @@ const StoryStyles = styled.div`
   }
 `;
 
-export default () => {
+export default function Stories() {
   const { t } = useTranslation("Stories");
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -127,7 +127,7 @@ export default () => {
       </div>
     </StoryStyles>
   );
-};
+}
 
 function orderStories(stories: StoryCardProps[]): StoryCardProps[] {
   return stories.sort(

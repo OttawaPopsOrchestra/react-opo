@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ConcertProps } from "../../components/Concerts/ConcertCard";
 import ConcertList from "../../components/Concerts/ConcertList";
 
-export default () => {
+export default function Concerts18() {
   const { t } = useTranslation(["Concerts18", "Concerts"]);
 
   const concerts = [
@@ -45,4 +45,4 @@ export default () => {
       title="Concerts 2018 - 2019"
     />
   );
-};
+}

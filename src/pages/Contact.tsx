@@ -35,10 +35,6 @@ const ContactStyles = styled.div`
     grid-row-gap: 2em;
   }
 
-  /* .MuiCardContent-root {
-    padding: 16px 5px;
-  } */
-
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
     padding: 2em 0em !important;
     align-items: center;
@@ -62,7 +58,7 @@ const ContactStyles = styled.div`
   }
 `;
 
-export default () => {
+export default function Contact() {
   const { t } = useTranslation("Contact");
 
   const contacts = [
@@ -120,4 +116,4 @@ export default () => {
       </div>
     </ContactStyles>
   );
-};
+}

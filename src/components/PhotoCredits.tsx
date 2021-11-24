@@ -43,7 +43,13 @@ const PhotoCreditStyles = styled.div`
   }
 `;
 
-export default ({ imgPath, credit }: { imgPath: string; credit: string }) => {
+export default function PhotoCredits({
+  imgPath,
+  credit,
+}: {
+  imgPath: string;
+  credit: string;
+}) {
   const { t } = useTranslation("Stories");
 
   return (
@@ -55,4 +61,4 @@ export default ({ imgPath, credit }: { imgPath: string; credit: string }) => {
       </div>
     </PhotoCreditStyles>
   );
-};
+}

@@ -11,7 +11,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import SocialMedia from "../../components/Stories/SocialMedia";
 import PhotoCredits from "../../components/PhotoCredits";
 
-export default () => {
+export default function JeffLeiper() {
   const { t } = useTranslation("JeffLeiper");
 
   const socialMediaProps = {
@@ -77,4 +77,4 @@ export default () => {
   };
 
   return <StorySingle {...props} />;
-};
+}

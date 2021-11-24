@@ -39,7 +39,7 @@ const StyledButton = styled(Button)`
   }
 `;
 
-export default ({
+export default function ActionButtonPurple({
   link,
   name,
   disabled = false,
@@ -47,10 +47,10 @@ export default ({
   link: string;
   name: any;
   disabled?: boolean;
-}) => {
+}) {
   return (
     <StyledButton disabled={disabled}>
       <a href={link}>{name}</a>
     </StyledButton>
   );
-};
+}

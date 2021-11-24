@@ -22,7 +22,13 @@ const FastFactStyles = styled.div`
   }
 `;
 
-export default ({ title, facts }: { title: string; facts: string[] }) => {
+export default function FastFacts({
+  title,
+  facts,
+}: {
+  title: string;
+  facts: string[];
+}) {
   return (
     <FastFactStyles>
       <div className="fastFactsTitle">{title}</div>
@@ -33,4 +39,4 @@ export default ({ title, facts }: { title: string; facts: string[] }) => {
       </ul>
     </FastFactStyles>
   );
-};
+}

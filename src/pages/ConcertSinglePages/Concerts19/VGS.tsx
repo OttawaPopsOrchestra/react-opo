@@ -2,7 +2,7 @@ import React from "react";
 import ConcertSingle from "../../../components/Concerts/ConcertSingle";
 import { useTranslation } from "react-i18next";
 
-export default () => {
+export default function VGS() {
   const { t } = useTranslation(["Concerts", "VGS"]);
 
   const vgsProps = {
@@ -23,4 +23,4 @@ export default () => {
     spotify: "https://open.spotify.com/embed/playlist/1xlIORmvzJLwbRRgsm46gv",
   };
   return <ConcertSingle {...vgsProps} />;
-};
+}

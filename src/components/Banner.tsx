@@ -45,11 +45,17 @@ const BannerStyles = styled.div`
   }
 `;
 
-export default ({ imgPath, title }: { imgPath: string; title?: string }) => {
+export default function Banner({
+  imgPath,
+  title,
+}: {
+  imgPath: string;
+  title?: string;
+}) {
   return (
     <BannerStyles>
       <img src={imgPath} alt="Concert" />
       {title && <div className="title">{title}</div>}
     </BannerStyles>
   );
-};
+}

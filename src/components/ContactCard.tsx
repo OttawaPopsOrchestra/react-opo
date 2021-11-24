@@ -121,7 +121,13 @@ type ContactType = {
   imgPath?: string;
 };
 
-export default ({ name, title, phone, email, imgPath }: ContactType) => {
+export default function ContactCard({
+  name,
+  title,
+  phone,
+  email,
+  imgPath,
+}: ContactType) {
   return (
     <ContactCardStyles>
       {imgPath ? (
@@ -156,4 +162,4 @@ export default ({ name, title, phone, email, imgPath }: ContactType) => {
       </Card>
     </ContactCardStyles>
   );
-};
+}

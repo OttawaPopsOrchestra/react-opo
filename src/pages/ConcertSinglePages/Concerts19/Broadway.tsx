@@ -2,7 +2,7 @@ import React from "react";
 import ConcertSingle from "../../../components/Concerts/ConcertSingle";
 import { useTranslation } from "react-i18next";
 
-export default () => {
+export default function Broadway() {
   const { t } = useTranslation(["Concerts", "POB"]);
 
   const pobProps = {
@@ -23,4 +23,4 @@ export default () => {
     spotify: "https://open.spotify.com/embed/playlist/4EBL0jzb36rCwR1EFXT7kq",
   };
   return <ConcertSingle {...pobProps} />;
-};
+}

@@ -37,7 +37,7 @@ const SubscribeButtonStyles = styled(Button)`
   }
 `;
 
-export default () => {
+export default function SubscribeButton() {
   const { t } = useTranslation("Footer");
 
   return (
@@ -46,4 +46,4 @@ export default () => {
       <SendIcon />
     </SubscribeButtonStyles>
   );
-};
+}

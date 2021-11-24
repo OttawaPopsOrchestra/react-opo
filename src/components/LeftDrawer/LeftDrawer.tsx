@@ -66,7 +66,10 @@ type LeftDrawerProps = {
   isFiltersDrawer?: boolean | null;
 };
 
-export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
+export default function LeftDrawer({
+  open,
+  setIsLeftDrawerOpen,
+}: LeftDrawerProps) {
   const { t } = useTranslation("LeftDrawer");
   const closeDrawer = () => setIsLeftDrawerOpen(false);
   const openDrawer = () => setIsLeftDrawerOpen(true);
@@ -155,4 +158,4 @@ export default ({ open, setIsLeftDrawerOpen }: LeftDrawerProps) => {
       </LeftDrawerStyles>
     </SwipeableDrawer>
   );
-};
+}

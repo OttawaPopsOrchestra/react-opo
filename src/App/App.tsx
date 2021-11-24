@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navbar from "../components/TopBar/TopBar";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AboutUs from "../pages/AboutUs";
 import HomePage from "../pages/HomePage";
 import Footer from "../components/Footer/Footer";
@@ -22,58 +22,28 @@ import BedfordTrio from "../pages/Stories/BedfordTrio";
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <Switch>
-          <Route exact={true} path="/" component={HomePage} />
-          <Route exact={true} path="/about" component={AboutUs} />
-          <Route exact={true} path="/2018-2019" component={Concerts18} />
-          <Route exact={true} path="/2019-2020" component={Concerts19} />
-          <Route exact={true} path="/stories" component={Stories} />
-          <Route exact={true} path="/contact" component={Contact} />
-          <Route exact={true} path="/covid" component={Covid} />
-          {/* 2019 - 2020 concert pages */}
-          <Route
-            exact={true}
-            path="/2019-2020/videogamesymphony"
-            component={VGS}
-          />
-          <Route
-            exact={true}
-            path="/2019-2020/videogamesymphony"
-            component={VGS}
-          />
-          <Route
-            exact={true}
-            path="/2019-2020/popsonbroadway"
-            component={Broadway}
-          />
-          <Route exact={true} path="/2019-2020/hmw" component={HMW} />
-          {/* stories */}
-          <Route exact={true} path="/stories/story1" component={Story1} />
-          <Route
-            exact={true}
-            path="/stories/twinflames"
-            component={TwinFlames}
-          />
-          <Route
-            exact={true}
-            path="/stories/raywatdeonandan"
-            component={Raywat}
-          />
-          <Route
-            exact={true}
-            path="/stories/jeffleiper"
-            component={JeffLeiper}
-          />
-          <Route
-            exact={true}
-            path="/stories/bedfordtrio"
-            component={BedfordTrio}
-          />
-        </Switch>
-        <Footer />
-      </BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/2018-2019" element={<Concerts18 />} />
+        <Route path="/2019-2020" element={<Concerts19 />} />
+        <Route path="/stories" element={<Stories />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/covid" element={<Covid />} />
+        {/* 2019 - 2020 concert pages */}
+        <Route path="/2019-2020/videogamesymphony" element={<VGS />} />
+        <Route path="/2019-2020/videogamesymphony" element={<VGS />} />
+        <Route path="/2019-2020/popsonbroadway" element={<Broadway />} />
+        <Route path="/2019-2020/hmw" element={<HMW />} />
+        {/* stories */}
+        <Route path="/stories/story1" element={<Story1 />} />
+        <Route path="/stories/twinflames" element={<TwinFlames />} />
+        <Route path="/stories/raywatdeonandan" element={<Raywat />} />
+        <Route path="/stories/jeffleiper" element={<JeffLeiper />} />
+        <Route path="/stories/bedfordtrio" element={<BedfordTrio />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

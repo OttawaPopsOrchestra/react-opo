@@ -15,7 +15,7 @@ type PlaylistProps = {
   link: string;
 };
 
-export default ({ id, link }: PlaylistProps) => {
+export default function Playlist({ id, link }: PlaylistProps) {
   return (
     <StyledIframe id={id || ""}>
       <iframe
@@ -25,4 +25,4 @@ export default ({ id, link }: PlaylistProps) => {
       ></iframe>
     </StyledIframe>
   );
-};
+}

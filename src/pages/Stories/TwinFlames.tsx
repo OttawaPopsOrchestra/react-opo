@@ -11,7 +11,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import SocialMedia from "../../components/Stories/SocialMedia";
 
-export default () => {
+export default function TwinFlames() {
   const { t } = useTranslation("TwinFlames");
 
   const socialMediaProps = {
@@ -115,4 +115,4 @@ export default () => {
   };
 
   return <StorySingle {...props} />;
-};
+}

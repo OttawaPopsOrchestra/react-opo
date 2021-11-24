@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-export default () => {
+export default function MeridianAddressInfo() {
   const { t } = useTranslation("Concerts");
   return (
     <>
@@ -14,4 +14,4 @@ export default () => {
       </a>
     </>
   );
-};
+}

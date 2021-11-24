@@ -59,7 +59,7 @@ type SocialMediaProps = {
   }[];
 };
 
-export default ({ share, socialMedias }: SocialMediaProps) => {
+export default function SocialMedia({ share, socialMedias }: SocialMediaProps) {
   return (
     <SocialMediaStyles>
       <div className="share">{share}</div>
@@ -74,4 +74,4 @@ export default ({ share, socialMedias }: SocialMediaProps) => {
       </div>
     </SocialMediaStyles>
   );
-};
+}

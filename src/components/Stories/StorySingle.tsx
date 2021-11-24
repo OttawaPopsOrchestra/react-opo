@@ -106,14 +106,14 @@ type StorySingleProps = {
   content: any;
 };
 
-export default ({
+export default function StorySingle({
   title,
   date,
   author,
   intro,
   imgPath,
   content,
-}: StorySingleProps) => {
+}: StorySingleProps) {
   const { t } = useTranslation("Stories");
   return (
     <StorySingleStyles>
@@ -143,4 +143,4 @@ export default ({
       {/* <div className="newsletter"></div> */}
     </StorySingleStyles>
   );
-};
+}

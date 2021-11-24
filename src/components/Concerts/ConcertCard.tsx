@@ -99,14 +99,14 @@ export type ConcertProps = {
   spotify?: string;
 };
 
-export default ({
+export default function ConcertCard({
   imgPath,
   title,
   description,
   timeDates,
   buyTickets,
   readMore,
-}: ConcertProps) => {
+}: ConcertProps) {
   const { t } = useTranslation("Concerts");
 
   const cancelled = description?.includes(t("cancelled"));
@@ -150,7 +150,7 @@ export default ({
       </div>
     </ConcertCardStyles>
   );
-};
+}
 
 function getHasEventPassed(timeDates) {
   const lastConcertDateString = timeDates[timeDates.length - 1]?.date || "";
