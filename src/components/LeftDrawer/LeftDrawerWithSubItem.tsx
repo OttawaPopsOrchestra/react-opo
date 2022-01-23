@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import MusicNoteIcon from "@material-ui/icons/MusicNote";
 import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
-import { ListItemText, Collapse, ListItem } from "@material-ui/core";
+import { ListItemText, Collapse, ListItem, ListItemIcon } from "@mui/material";
 import { Link } from "react-router-dom";
 import { isCurrentPage, DrawerItem } from "./LeftDrawer";
 import styled from "styled-components/macro";

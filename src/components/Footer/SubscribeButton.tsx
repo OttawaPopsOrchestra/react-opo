@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { primaryMaroon } from "../../constants/colors";
 import { FONT_SIZE_SMALL, BREAKPOINT_MOBILE } from "../../constants/constants";

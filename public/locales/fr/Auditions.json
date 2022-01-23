@@ -1,0 +1,59 @@
+{
+  "title": "Auditions",
+  "p1": " Les auditions pour la saison 2021-22 sont maintenant ouvertes",
+  "p2": "En raison de la situation actuelle avec la pandémie COVID-19, toutes les auditions se dérouleront virtuellement. Nous acceptons présentement les auditions pour tous les instruments d'orchestre. ",
+  "p3": "Veuillez noter que les dates de répétition et de représentation pour la saison 2021-2022 peuvent changer en fonction de l'évolution de la situation. Les répétitions ont généralement lieu le dimanche soir de 18 à 21 heures à l'École de musique de l'Université d'Ottawa. Les représentations principales auront lieu au Meridian Theatres à Centrepointe. Les répétitions générales ont généralement lieu le vendredi de 12 h à 16 h et les représentations se déroulent généralement le vendredi ou le samedi à 19 h 30. ",
+  "p4": "Veuillez envoyer votre matériel d'audition à <a href='mailto: auditions@ottawapopsorchestra.ca'>auditions@ottawapopsorchestra.ca</a> via le lien YOUTUBE non répertorié avant le 30 septembre 2021. Aucun autre format de soumission ne sera accepté. Les soumissions tardives ne seront prises en compte que s'il y a des postes vacants ou si votre instrument a un besoin particulier. ",
+  "p5": "TOUS LES CANDIDATS doivent préparer 2 pièces contrastantes d’une durée maximale de 10 minutes, en plus des exigences suivants. Les candidats qui auditionnent pour des postes avec un instrument de doublage doivent préparer un morceau supplémentaire pour chaque instrument de doublage. Les extraits d’orchestre sont acceptés. ",
+  "regHere": "Inscrivez-vous",
+
+  "strings-title": "Cordes",
+  "concertMaster-title": "Premier violon solo",
+  "concertMaster-p1": "Les candidats postulant pour Premier violon solo pour la saison 2018-2019 de l’Orchestre Pop d’Ottawa doivent préparer une audition vidéo et envoyer un lien Youtube, les partitions et un CV à l’adresse <a href='mailto: auditions@ottawapopsorchestra.ca'>auditions@ottawapopsorchestra.ca</a> au plus tard le 10 septembre 2019 à 17h (heure de l’est). Le candidat retenu recevra $150.00 (CENT CINQUANTE) CDN pour chaque performance éligible. Les performances éligibles incluent les répétitions générales (finales avant les concerts) ainsi que les concerts. Toutes autres répétitions ne sont pas éligibles à une compensation. ",
+
+  "excerpts-title": "Extraits",
+  "excerpts-val1": "Strauss - Don Juan, Op. 20, m. 1-62.",
+  "excerpts-val2": "Mendelssohn - Midsummer Night’s Dream: Ouverture, mm 6-81.",
+
+  "scales-title": "Gammes",
+  "scales-val": "Ré majeur 3 octaves",
+  "scales-p1": "Toutes les gammes doivent être jouées à BPM=60 à la noire (minimum), en doubles croches, ascendant et descendant, 8 notes par coup d’archet. ",
+  "scales-l1": "Violon de section – Ré majeur 3 octaves",
+  "scales-l2": "Alto - Sol majeur 3 octaves",
+  "scales-l3": "Violoncelle – Ré majeur 3 octaves",
+  "scales-l4": "Contrebasse – n’importe quelle gamme 2 octaves",
+
+  "woodwinds-title": "Bois",
+  "woodwinds-p1": "Flûte/piccolo – Ré majeur 3 octaves",
+  "woodwinds-p2": "Hautbois/cor anglais – Mi bémol majeur 2 octaves",
+  "woodwinds-p3": "Clarinette/clarinette basse - Fa majeur 3 octaves",
+  "woodwinds-p4": "Basson – n’importe quelle gamme 2 octaves",
+
+  "brass-title": "Cuivres",
+  "brass-p1": "Tous les cuivres – n’importe quelle gamme 2 octaves",
+
+  "percussionists-title": "Percussionistes",
+  "percussionists-p1": "Les percussionnistes doivent préparer au minimum un extrait à la caisse claire et un extrait à maillets (marimba/xylophone/etc.). Les postulants peuvent préparer des pièces supplémentaires utilisant d’autres instruments tant que la durée totale de l’audition ne dépasse pas 12 minutes.",
+  "percussionists-p2": "L’OPO ne fournit aucune baguette/maillet à l’audition. Pour les auditions en personne, les candidats doivent apporter les leurs.",
+  "percussionists-p3": "Les candidats peuvent également apporter leur propre caisse claire à l’audition.",
+
+  "live-title": "Instruments fournis pour les auditions en personne",
+  "live-l1": "Glockenspiel Deagan 1558 2.5 Octave",
+  "live-l2": "Xylophone Musser 4.0 Octave",
+  "live-l3": "Marimba Yamaha 4.3 Octave Acoustalon",
+  "live-l4": "Caisse claire - Fibes 4’’x14’’ Maple Shell Single Ply with die cast rims",
+  "live-l5": "Jeu de 4 timbales Ludwig (23’’, 26’’, 29’’, 32’’)",
+
+  "harp-title": "Harpe",
+  "harp-value": "3 octaves de votre choix, mains ensemble, PPM  80+",
+
+  "piano-title": "Piano",
+  "piano-value": "a bémol majeur à motion parallèle de 4 octaves, mains ensemble, 104 PPM. Accord brisé à 4 notes Fa dièse mineur tonique avec alternation des notes de 2 octaves (finissant avec la progression d’accord I-IV-164-V-I) mains ensemble 80 PPM.",
+
+  "results-title": "RÉSULTATS D’AUDITION",
+  "results-p": "Tous les candidats seront informés des résultats des auditions. Il est possible que les musiciens acceptés seront appelés à jouer pour tout ou quelques-uns des concerts. Tous les candidats seront avisés de quelle classe de musiciens à laquelle ils appartiennent et si la Bourse de développement orchestral leur a été décernée.",
+
+  "membership-title": "INFORMATION DE MEMBRIÉTÉ",
+  "membership-p1": "The OPO is classified as a semi professional orchestra consisting of a mixture of community and professional musicians. The OPO concert season runs from September to mid-May, with weekly rehearsals occurring on Sunday evenings from 6pm to 9pm (with occasional sectionals Fridays 6:30pm to 9:30pm) in room 109 of Perez Hall, 610 Cumberland St. Applicants are asked to ensure they can fully commit to the concert schedule for which they are participating. Accepted musicians may not miss more than one rehearsal per concert period. Dress rehearsals are mandatory, no exceptions. Applicants should be available for all concerts of the season and should indicate at the audition if they have a scheduling conflict with dress rehearsals or concerts.",
+  "membership-p2": "Tous les membres doivent repasser en audition à chaque saison."
+}

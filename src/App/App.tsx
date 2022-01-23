@@ -18,6 +18,7 @@ import Raywat from "../pages/Stories/Raywat";
 import JeffLeiper from "../pages/Stories/JeffLeiper";
 import Covid from "../pages/Covid";
 import BedfordTrio from "../pages/Stories/BedfordTrio";
+import Auditions from "../pages/Orchestra/Auditions";
 
 function App() {
   return (
@@ -26,22 +27,25 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
+        {/* concerts */}
         <Route path="/2018-2019" element={<Concerts18 />} />
         <Route path="/2019-2020" element={<Concerts19 />} />
-        <Route path="/stories" element={<Stories />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/covid" element={<Covid />} />
-        {/* 2019 - 2020 concert pages */}
         <Route path="/2019-2020/videogamesymphony" element={<VGS />} />
         <Route path="/2019-2020/videogamesymphony" element={<VGS />} />
         <Route path="/2019-2020/popsonbroadway" element={<Broadway />} />
         <Route path="/2019-2020/hmw" element={<HMW />} />
+        {/* orchestra */}
+        <Route path="/auditions" element={<Auditions />} />
         {/* stories */}
+        <Route path="/stories" element={<Stories />} />
         <Route path="/stories/story1" element={<Story1 />} />
         <Route path="/stories/twinflames" element={<TwinFlames />} />
         <Route path="/stories/raywatdeonandan" element={<Raywat />} />
         <Route path="/stories/jeffleiper" element={<JeffLeiper />} />
         <Route path="/stories/bedfordtrio" element={<BedfordTrio />} />
+        {/* other */}
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/covid" element={<Covid />} />
       </Routes>
       <Footer />
     </>

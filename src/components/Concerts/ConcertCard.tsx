@@ -1,5 +1,4 @@
 import React from "react";
-import { Card, CardContent, CardActions } from "@material-ui/core";
 import styled from "styled-components/macro";
 import DateTime, { DateTimeProps } from "./DateTime";
 import {
@@ -10,6 +9,7 @@ import {
 import ActionButton from "../Buttons/ActionButton";
 import { useTranslation } from "react-i18next";
 import { hasDatePassed, getDateObject } from "../../utils/dateTimeUtils";
+import { Card, CardActions, CardContent } from "@mui/material";
 
 const ConcertCardStyles = styled(Card)`
   display: flex;

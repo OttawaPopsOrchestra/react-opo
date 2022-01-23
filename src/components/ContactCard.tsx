@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { Card, CardContent } from "@material-ui/core";
+import { Card, CardContent } from "@mui/material";
 import { primaryMaroon } from "../constants/colors";
 import {
   FONT_SIZE_MEDIUM,

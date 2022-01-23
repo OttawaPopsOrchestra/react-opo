@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import styled from "styled-components/macro";
 import { primaryMaroon } from "../../constants/colors";
 import { FONT_SIZE_SMALL } from "../../constants/constants";

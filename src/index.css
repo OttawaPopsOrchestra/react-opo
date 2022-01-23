@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
+@font-face {
+  font-family: "Quicksand";
+  src: local("Quicksand"),
+    url(./fonts/Quicksand/Quicksand-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: FuturaPTMedium;
+  src: locate("FuturaPTMedium"), url("./FuturaPTMedium.otf") format("opentype");
+}
+
 body {
   margin: 0;
   font-family: "Quicksand", sans-serif;
@@ -10,9 +21,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-@font-face {
-  font-family: FuturaPTMedium;
-  src: locate("FuturaPTMedium"), url("./FuturaPTMedium.otf") format("opentype");
 }

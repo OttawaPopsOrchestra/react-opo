@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { useTranslation } from "react-i18next";
-import { Typography, Divider, IconButton } from "@material-ui/core";
+import { Typography, Divider, IconButton } from "@mui/material";
 import { BREAKPOINT_MOBILE } from "../../constants/constants";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";

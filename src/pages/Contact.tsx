@@ -14,7 +14,7 @@ const ContactStyles = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${lighterGrey};
-  padding: 2em 5em 3em;
+  padding: 3em 5em;
 
   .pageTitle {
     font-size: ${FONT_SIZE_EXTRA_LARGE}px;

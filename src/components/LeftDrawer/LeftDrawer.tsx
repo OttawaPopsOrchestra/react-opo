@@ -1,11 +1,8 @@
 import React, { Dispatch, SetStateAction } from "react";
-import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 import styled from "styled-components/macro";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Divider } from "@material-ui/core";
+import { Divider, List, ListItem, SwipeableDrawer } from "@mui/material";
 import { primaryMaroon } from "../../constants/colors";
 import LeftDrawerWithSubItem from "./LeftDrawerWithSubItem";
 
