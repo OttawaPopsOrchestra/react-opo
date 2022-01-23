@@ -9,11 +9,11 @@
 
   "strings-title": "Strings",
   "concertMaster-title": "Concert master",
-  "concertMaster-p1": "Applicants wishing to be considered for Concertmaster for the Ottawa Pops Orchestra 2021-2022 season should prepare a video audition and send a Youtube link, sheet music, and CV to auditions@ottawapopsorchestra.ca by no later than September 10th 2019 17:00 EST. The successful candidate will receive a compensation of $150.00 (ONE HUNDRED AND FIFTY) CDN for each eligible service. Eligible services include all dress rehearsals and performances. All other rehearsals are not eligible for compensation.",
+  "concertMaster-p1": "Applicants wishing to be considered for Concertmaster for the Ottawa Pops Orchestra 2021-2022 season should prepare a video audition and send a Youtube link, sheet music, and CV to <a href='mailto: auditions@ottawapopsorchestra.ca'>auditions@ottawapopsorchestra.ca</a> by no later than September 10th 2019 17:00 EST. The successful candidate will receive a compensation of $150.00 (ONE HUNDRED AND FIFTY) CDN for each eligible service. Eligible services include all dress rehearsals and performances. All other rehearsals are not eligible for compensation.",
 
   "excerpts-title": "Excerpts",
-  "excerpts-val1": "Strauss - Don Juan, Op. 20, m. 1-62.",
-  "excerpts-val2": "Mendelssohn - Midsummer Night’s Dream: Overture, mm 6-81.",
+  "excerpts-p1": "Strauss - Don Juan, Op. 20, m. 1-62.",
+  "excerpts-p2": "Mendelssohn - Midsummer Night’s Dream: Overture, mm 6-81.",
 
   "scales-title": "Scales",
   "scales-val": "D-Major 3 octaves",
@@ -38,20 +38,21 @@
   "percussionists-p3": "Live audition candidates may bring their own snare drum to the audition",
 
   "live-title": "Instruments Provided for Live Audition",
-  "live-l1": "Deagan 1558 2.5 Octave Glockenspiel",
-  "live-l2": "Musser 4.0 Octave Xylophone",
-  "live-l3": "Yamaha 4.3 Octave Acoustalon Marimba",
-  "live-l4": "Fibes 14x4 Maple Shell Single Ply with die cast rims",
-  "live-l5": "Set of 4 Ludwig Timpani (23’’, 26’’, 29’’, 32’’)",
+  "live-p1": "Deagan 1558 2.5 Octave Glockenspiel",
+  "live-p2": "Musser 4.0 Octave Xylophone",
+  "live-p3": "Yamaha 4.3 Octave Acoustalon Marimba",
+  "live-p4": "Fibes 14x4 Maple Shell Single Ply with die cast rims",
+  "live-p5": "Set of 4 Ludwig Timpani (23’’, 26’’, 29’’, 32’’)",
 
   "harp-title": "Harp",
-  "harp-value": "Any scale 3 octaves, hands together, BPM 80+",
+  "harp-p1": "Any scale 3 octaves, hands together, BPM 80+",
 
   "piano-title": "Piano",
-  "piano-value": "Ab major parallel motion scale 4 octaves hands together BPM=104. F# minor tonic four note chord broken alternate-note pattern 2 octaves (ending with I-IV-164-V-I chord progression) hand together BPM=80.",
+  "piano-p1": "Ab major parallel motion scale 4 octaves hands together BPM=104.",
+  "piano-p2": "F# minor tonic four note chord broken alternate-note pattern 2 octaves (ending with I-IV-164-V-I chord progression) hand together BPM=80.",
 
   "results-title": "Audition Results",
-  "results-p": "All applicants will be informed of the outcome of their audition. It is possible that successful musicians be called for all, or some concerts. All applicants will be made aware of which class of musicians they belong to as well as if they have been selected for the Orchestral Development Bursary or any other form of remuneration.",
+  "results-p1": "All applicants will be informed of the outcome of their audition. It is possible that successful musicians be called for all, or some concerts. All applicants will be made aware of which class of musicians they belong to as well as if they have been selected for the Orchestral Development Bursary or any other form of remuneration.",
 
   "membership-title": "Membership Information",
   "membership-p1": "The OPO is classified as a semi professional orchestra consisting of a mixture of community and professional musicians. The OPO concert season runs from September to mid-May, with weekly rehearsals occurring on Sunday evenings from 6pm to 9pm (with occasional sectionals Fridays 6:30pm to 9:30pm) in room 109 of Perez Hall, 610 Cumberland St. Applicants are asked to ensure they can fully commit to the concert schedule for which they are participating. Accepted musicians may not miss more than one rehearsal per concert period. Dress rehearsals are mandatory, no exceptions. Applicants should be available for all concerts of the season and should indicate at the audition if they have a scheduling conflict with dress rehearsals or concerts.",

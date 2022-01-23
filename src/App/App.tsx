@@ -19,10 +19,11 @@ import JeffLeiper from "../pages/Stories/JeffLeiper";
 import Covid from "../pages/Covid";
 import BedfordTrio from "../pages/Stories/BedfordTrio";
 import Auditions from "../pages/Orchestra/Auditions";
+import { ThemeManager } from "../ThemeManager";
 
 function App() {
   return (
-    <>
+    <ThemeManager>
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -48,7 +49,7 @@ function App() {
         <Route path="/covid" element={<Covid />} />
       </Routes>
       <Footer />
-    </>
+    </ThemeManager>
   );
 }
 
