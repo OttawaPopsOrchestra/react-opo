@@ -1,3 +1,4 @@
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Accordion,
   AccordionDetails,
@@ -11,7 +12,6 @@ import ActionButton from "../../components/Buttons/ActionButton";
 import TabsContainer from "../../components/TabsContainer";
 import { lightGrey, primaryMaroon } from "../../constants/colors";
 import { BREAKPOINT_MOBILE, FONT_SIZE_SMALL } from "../../constants/constants";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const AuditionStyles = styled.div`
   background-color: ${lightGrey};
@@ -75,6 +75,13 @@ const AuditionStyles = styled.div`
     }
   }
 
+  #audition-reg {
+    margin: 2em auto 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
     .MuiBox-root {
       width: 100%;
@@ -102,7 +109,7 @@ export default function Auditions() {
         <div className="content">
           <div className="focusAndRegister">
             <div className="focus">{t("p1")}</div>
-            <ActionButton name={t("regHere")} link="" />
+            <ActionButton name={t("regHere")} link="#audition-reg" />
           </div>
           <p>{t("p2")}</p>
           <p>{t("p3")}</p>
@@ -117,6 +124,32 @@ export default function Auditions() {
           <h2>{t("membership-title")}</h2>
           <p>{t("membership-p1")}</p>
           <p>{t("membership-p2")}</p>
+          <b>
+            <a
+              href="pdf/Ottawa%20Pops%20Orchestra%20Musician%20Policy%20updated%20July%202019.pdf"
+              target="_blank"
+            >
+              Ottawa Pops Orchestra Musician Policy
+            </a>
+          </b>
+          <b>
+            <a
+              href="/pdf/Orchestral%20Development%20Bursary.pdf"
+              target="_blank"
+            >
+              Orchestral Development Bursary
+            </a>
+          </b>
+          <div id="audition-reg">
+            <iframe
+              title="Auditions"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSecGvNIiQiXRxwq-qPYKx4-bCCHXNDZQYyxpMq1XmhVfCia3A/viewform?embedded=true"
+              width="625"
+              height="500"
+            >
+              Loading…
+            </iframe>
+          </div>
         </div>
       </AuditionStyles>
     </>
