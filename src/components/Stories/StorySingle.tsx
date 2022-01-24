@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components/macro";
 import { useTranslation } from "react-i18next";
 import { secondaryPurple } from "../../constants/colors";
-import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import ActionButtonPurple from "../Buttons/ActionButtonPurple";
-import MusicNoteIcon from "@material-ui/icons/MusicNote";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import {
   FONT_SIZE_SMALL,
   FONT_SIZE_MEDIUM,

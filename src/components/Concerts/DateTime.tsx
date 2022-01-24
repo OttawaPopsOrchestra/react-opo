@@ -1,6 +1,5 @@
-import React from "react";
-import EventIcon from "@material-ui/icons/Event";
-import AccessTimeIcon from "@material-ui/icons/AccessTime";
+import EventIcon from "@mui/icons-material/Event";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import styled from "styled-components/macro";
 import { primaryMaroon } from "../../constants/colors";
 

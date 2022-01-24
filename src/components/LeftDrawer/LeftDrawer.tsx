@@ -99,6 +99,13 @@ export default function LeftDrawer({
       ],
     },
     {
+      title: t("getInvolved"),
+      subMenu: [
+        { title: t("donate"), link: "donate" },
+        { title: t("joinBoard"), link: "join-our-board" },
+      ],
+    },
+    {
       title: t("contact"),
       link: "contact",
     },

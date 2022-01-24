@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 import { Link } from "react-router-dom";
 import LeftDrawer from "../LeftDrawer/LeftDrawer";
 import { Tooltip, IconButton, AppBar, Toolbar } from "@mui/material";
-import MenuIcon from "@material-ui/icons/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
 import LanguageSelector from "./LanguageSelector";
 import { BREAKPOINT_MOBILE } from "../../constants/constants";
 

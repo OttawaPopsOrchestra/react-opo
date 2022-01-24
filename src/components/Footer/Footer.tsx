@@ -3,10 +3,10 @@ import styled from "styled-components/macro";
 import { useTranslation } from "react-i18next";
 import { Typography, Divider, IconButton } from "@mui/material";
 import { BREAKPOINT_MOBILE } from "../../constants/constants";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import YouTubeIcon from "@material-ui/icons/YouTube";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import SubscribeButton from "./SubscribeButton";
 
 // const FULL_WIDTH = 100;

@@ -7,9 +7,9 @@ import {
   FONT_SIZE_SMALL,
   BREAKPOINT_MOBILE,
 } from "../constants/constants";
-import PhoneIcon from "@material-ui/icons/Phone";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import PersonIcon from "@material-ui/icons/Person";
+import PhoneIcon from "@mui/icons-material/Phone";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import PersonIcon from "@mui/icons-material/Person";
 
 const IMAGE_HEIGHT = 160;
 

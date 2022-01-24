@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { primaryMaroon } from "../../constants/colors";
 import { FONT_SIZE_SMALL, BREAKPOINT_MOBILE } from "../../constants/constants";
-import SendIcon from "@material-ui/icons/Send";
+import SendIcon from "@mui/icons-material/Send";
 
 const SubscribeButtonStyles = styled(Button)`
   &&& {

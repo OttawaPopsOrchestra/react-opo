@@ -5,7 +5,7 @@ import { BREAKPOINT_TABTOP } from "../../constants/constants";
 import { useTranslation } from "react-i18next";
 import { getDateObject } from "../../utils/dateTimeUtils";
 import { TextField, IconButton } from "@mui/material";
-import ClearIcon from "@material-ui/icons/Clear";
+import ClearIcon from "@mui/icons-material/Clear";
 
 const StoryStyles = styled.div`
   .stories {

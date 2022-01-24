@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IconButton, MenuItem, Menu, Tooltip } from "@mui/material";
-import Language from "@material-ui/icons/Language";
+import Language from "@mui/icons-material/Language";
 import { useTranslation } from "react-i18next";
 import i18n from "../../i18n";
 

@@ -4,10 +4,10 @@ import StorySingle from "../../components/Stories/StorySingle";
 import Playlist from "../../components/Playlist";
 import FastFacts from "../../components/Stories/FastFacts";
 import { range } from "lodash";
-import LinkIcon from "@material-ui/icons/Link";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from "@material-ui/icons/Twitter";
+import LinkIcon from "@mui/icons-material/Link";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import SocialMedia from "../../components/Stories/SocialMedia";
 import PhotoCredits from "../../components/PhotoCredits";
 
