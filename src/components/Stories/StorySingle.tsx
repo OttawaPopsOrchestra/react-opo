@@ -11,6 +11,54 @@ import {
   BREAKPOINT_MOBILE,
 } from "../../constants/constants";
 
+type StorySingleProps = {
+  title: string;
+  date: string;
+  author: string;
+  intro?: string;
+  imgPath: any;
+  content: any;
+};
+
+export default function StorySingle({
+  title,
+  date,
+  author,
+  intro,
+  imgPath,
+  content,
+}: StorySingleProps) {
+  const { t } = useTranslation("Stories");
+  return (
+    <StorySingleStyles>
+      <div className="title">{title}</div>
+      <div className="info">
+        {date}
+        <PersonOutlineIcon />
+        {author}
+      </div>
+      {intro && <div className="intro">{intro}</div>}
+      {typeof imgPath === "string" ? (
+        <img src={imgPath} alt={title} />
+      ) : (
+        imgPath
+      )}
+      <ActionButtonPurple
+        link="#playlist"
+        name={
+          <div className="listenButton">
+            {t("listen")}
+            <MusicNoteIcon />
+          </div>
+        }
+      />
+      <div className="content">{content()}</div>
+      {/* TODO SETUP NEWSLETTER LINK WHEN DONE IN FOOTER */}
+      {/* <div className="newsletter"></div> */}
+    </StorySingleStyles>
+  );
+}
+
 const StorySingleStyles = styled.div`
   display: flex;
   flex-direction: column;
@@ -96,51 +144,3 @@ const StorySingleStyles = styled.div`
     }
   }
 `;
-
-type StorySingleProps = {
-  title: string;
-  date: string;
-  author: string;
-  intro?: string;
-  imgPath: any;
-  content: any;
-};
-
-export default function StorySingle({
-  title,
-  date,
-  author,
-  intro,
-  imgPath,
-  content,
-}: StorySingleProps) {
-  const { t } = useTranslation("Stories");
-  return (
-    <StorySingleStyles>
-      <div className="title">{title}</div>
-      <div className="info">
-        {date}
-        <PersonOutlineIcon />
-        {author}
-      </div>
-      {intro && <div className="intro">{intro}</div>}
-      {typeof imgPath === "string" ? (
-        <img src={imgPath} alt={title} />
-      ) : (
-        imgPath
-      )}
-      <ActionButtonPurple
-        link="#playlist"
-        name={
-          <div className="listenButton">
-            {t("listen")}
-            <MusicNoteIcon />
-          </div>
-        }
-      />
-      <div className="content">{content()}</div>
-      {/* TODO SETUP NEWSLETTER LINK WHEN DONE IN FOOTER */}
-      {/* <div className="newsletter"></div> */}
-    </StorySingleStyles>
-  );
-}

@@ -19,6 +19,7 @@ import JeffLeiper from "../pages/Stories/JeffLeiper";
 import Covid from "../pages/Covid";
 import BedfordTrio from "../pages/Stories/BedfordTrio";
 import Auditions from "../pages/Orchestra/Auditions";
+import Conductors from "../pages/Orchestra/Conductors";
 import { ThemeManager } from "../ThemeManager";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/2019-2020/hmw" element={<HMW />} />
         {/* orchestra */}
         <Route path="/auditions" element={<Auditions />} />
+        <Route path="/conductors" element={<Conductors />} />
         {/* stories */}
         <Route path="/stories" element={<Stories />} />
         <Route path="/stories/story1" element={<Story1 />} />

@@ -4,7 +4,24 @@ import { FONT_SIZE_SMALL, BREAKPOINT_TABTOP } from "../constants/constants";
 
 export const TITLE_HEIGHT = 100;
 
-const BannerStyles = styled.div`
+export default function Banner({
+  imgPath,
+  title,
+  objectPosition = "inherit",
+}: {
+  imgPath: string;
+  title?: string;
+  objectPosition?: string;
+}) {
+  return (
+    <BannerStyles objectPosition={objectPosition}>
+      <img src={imgPath} alt="Concert" />
+      {title && <div className="title">{title}</div>}
+    </BannerStyles>
+  );
+}
+
+const BannerStyles = styled.div<{ objectPosition: string }>`
   position: relative;
   text-align: center;
   color: white;
@@ -27,6 +44,7 @@ const BannerStyles = styled.div`
     width: 100%;
     height: ${TITLE_HEIGHT * 4}px;
     border-bottom: 10px black solid;
+    object-position: ${(props) => props.objectPosition};
   }
 
   @media (max-width: ${BREAKPOINT_TABTOP}px) {
@@ -44,18 +62,3 @@ const BannerStyles = styled.div`
     }
   }
 `;
-
-export default function Banner({
-  imgPath,
-  title,
-}: {
-  imgPath: string;
-  title?: string;
-}) {
-  return (
-    <BannerStyles>
-      <img src={imgPath} alt="Concert" />
-      {title && <div className="title">{title}</div>}
-    </BannerStyles>
-  );
-}

@@ -13,91 +13,6 @@ import TabsContainer from "../../components/TabsContainer";
 import { lightGrey, primaryMaroon } from "../../constants/colors";
 import { BREAKPOINT_MOBILE, FONT_SIZE_SMALL } from "../../constants/constants";
 
-const AuditionStyles = styled.div`
-  background-color: ${lightGrey};
-  font-family: "Quicksand", sans-serif !important;
-
-  a {
-    color: ${primaryMaroon};
-    text-decoration: none;
-  }
-
-  h2,
-  h3,
-  h4,
-  h6 {
-    color: ${primaryMaroon};
-    font-weight: bold;
-  }
-
-  .MuiBox-root {
-    background-color: white;
-    margin: 0 auto;
-    border-radius: 10px;
-
-    .MuiButtonBase-root {
-      font-size: ${FONT_SIZE_SMALL - 2}px;
-    }
-
-    .MuiTabPanel-root {
-      min-height: 200px;
-    }
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    margin: 0 auto;
-    padding: 5em 0;
-    font-size: ${FONT_SIZE_SMALL}px;
-  }
-
-  .focusAndRegister {
-    display: grid;
-    grid-template-columns: 70% 20%;
-    grid-column-gap: 2em;
-    padding-bottom: 2em;
-
-    .focus {
-      font-size: ${FONT_SIZE_SMALL + 2}px;
-      font-weight: 700;
-      border: 2px solid ${primaryMaroon};
-      color: ${primaryMaroon};
-      padding: 1em;
-      border-radius: 25px;
-      text-align: center;
-      box-shadow: 10px 10px 8px grey;
-    }
-
-    button {
-      background-color: white;
-    }
-  }
-
-  #audition-reg {
-    margin: 2em auto 0;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  @media (max-width: ${BREAKPOINT_MOBILE}px) {
-    .MuiBox-root {
-      width: 100%;
-    }
-
-    .content {
-      width: 90%;
-    }
-    .focusAndRegister {
-      display: grid;
-      grid-template-columns: auto;
-      grid-row-gap: 1em;
-    }
-  }
-`;
-
 export default function Auditions() {
   const { t } = useTranslation("Auditions");
   const tabs = useFetchAudtionTabs();
@@ -244,3 +159,88 @@ function useFetchAudtionTabs() {
     },
   ];
 }
+
+const AuditionStyles = styled.div`
+  background-color: ${lightGrey};
+  font-family: "Quicksand", sans-serif !important;
+
+  a {
+    color: ${primaryMaroon};
+    text-decoration: none;
+  }
+
+  h2,
+  h3,
+  h4,
+  h6 {
+    color: ${primaryMaroon};
+    font-weight: bold;
+  }
+
+  .MuiBox-root {
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    .MuiButtonBase-root {
+      font-size: ${FONT_SIZE_SMALL - 2}px;
+    }
+
+    .MuiTabPanel-root {
+      min-height: 200px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    padding: 5em 0;
+    font-size: ${FONT_SIZE_SMALL}px;
+  }
+
+  .focusAndRegister {
+    display: grid;
+    grid-template-columns: 70% 20%;
+    grid-column-gap: 2em;
+    padding-bottom: 2em;
+
+    .focus {
+      font-size: ${FONT_SIZE_SMALL + 2}px;
+      font-weight: 700;
+      border: 2px solid ${primaryMaroon};
+      color: ${primaryMaroon};
+      padding: 1em;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 10px 10px 8px grey;
+    }
+
+    button {
+      background-color: white;
+    }
+  }
+
+  #audition-reg {
+    margin: 2em auto 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    .MuiBox-root {
+      width: 100%;
+    }
+
+    .content {
+      width: 90%;
+    }
+    .focusAndRegister {
+      display: grid;
+      grid-template-columns: auto;
+      grid-row-gap: 1em;
+    }
+  }
+`;
