@@ -6,47 +6,6 @@ import { Divider, List, ListItem, SwipeableDrawer } from "@mui/material";
 import { primaryMaroon } from "../../constants/colors";
 import LeftDrawerWithSubItem from "./LeftDrawerWithSubItem";
 
-const WIDTH = 280;
-
-const LeftDrawerStyles = styled(List)`
-  width: ${WIDTH}px;
-  display: flex;
-  flex-direction: column;
-  align-items: center !important;
-
-  #logo {
-    padding: 1em;
-  }
-
-  .item {
-    height: 3em !important;
-  }
-
-  a,
-  .principleMenu > .MuiTypography-body1,
-  .subMenu {
-    color: black;
-    text-decoration: none !important;
-    font-size: 18px !important;
-    font-family: "Quicksand", sans-serif !important;
-  }
-
-  .subMenu {
-    font-weight: 400 !important;
-  }
-
-  .active,
-  .active:disabled {
-    background-color: ${primaryMaroon};
-    opacity: 1 !important;
-
-    a,
-    .MuiListItemIcon-root {
-      color: white;
-    }
-  }
-`;
-
 export const isCurrentPage = (link?: string) => {
   return link && window.location.pathname === `/${link}`;
 };
@@ -79,8 +38,7 @@ export default function LeftDrawer({
     {
       title: t("concerts"),
       subMenu: [
-        // ARCHIVED { title: "2018 - 2019", link: "2018-2019" },
-        { title: "2019 - 2020", link: "2019-2020" },
+        { title: t("programming"), link: "programming" },
         { title: t("seasonTickets"), link: "seasonTickets" },
       ],
     },
@@ -163,3 +121,44 @@ export default function LeftDrawer({
     </SwipeableDrawer>
   );
 }
+
+const WIDTH = 280;
+
+const LeftDrawerStyles = styled(List)`
+  width: ${WIDTH}px;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+
+  #logo {
+    padding: 1em;
+  }
+
+  .item {
+    height: 3em !important;
+  }
+
+  a,
+  .principleMenu > .MuiTypography-body1,
+  .subMenu {
+    color: black;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    font-family: "Quicksand", sans-serif !important;
+  }
+
+  .subMenu {
+    font-weight: 400 !important;
+  }
+
+  .active,
+  .active:disabled {
+    background-color: ${primaryMaroon};
+    opacity: 1 !important;
+
+    a,
+    .MuiListItemIcon-root {
+      color: white;
+    }
+  }
+`;

@@ -1,26 +1,25 @@
 import React from "react";
-import "./App.css";
-import Navbar from "../components/TopBar/TopBar";
 import { Route, Routes } from "react-router-dom";
-import AboutUs from "../pages/AboutUs";
-import HomePage from "../pages/HomePage";
 import Footer from "../components/Footer/Footer";
+import Navbar from "../components/TopBar/TopBar";
+import AboutUs from "../pages/AboutUs";
 import Concerts18 from "../pages/ConcertListPages/Concerts18";
-import Concerts19 from "../pages/ConcertListPages/Concerts19";
-import VGS from "../pages/ConcertSinglePages/Concerts19/VGS";
+import Concerts22 from "../pages/ConcertListPages/Concerts22";
 import Broadway from "../pages/ConcertSinglePages/Concerts19/Broadway";
-import HMW from "../pages/ConcertSinglePages/Concerts19/HMW";
+import VGS from "../pages/ConcertSinglePages/Concerts19/VGS";
 import Contact from "../pages/Contact";
+import Covid from "../pages/Covid";
+import HomePage from "../pages/HomePage";
+import Auditions from "../pages/Orchestra/Auditions";
+import Conductors from "../pages/Orchestra/Conductors";
+import BedfordTrio from "../pages/Stories/BedfordTrio";
+import JeffLeiper from "../pages/Stories/JeffLeiper";
+import Raywat from "../pages/Stories/Raywat";
 import Stories from "../pages/Stories/Stories";
 import Story1 from "../pages/Stories/Story1";
 import TwinFlames from "../pages/Stories/TwinFlames";
-import Raywat from "../pages/Stories/Raywat";
-import JeffLeiper from "../pages/Stories/JeffLeiper";
-import Covid from "../pages/Covid";
-import BedfordTrio from "../pages/Stories/BedfordTrio";
-import Auditions from "../pages/Orchestra/Auditions";
-import Conductors from "../pages/Orchestra/Conductors";
 import { ThemeManager } from "../ThemeManager";
+import "./App.css";
 
 function App() {
   return (
@@ -30,12 +29,12 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUs />} />
         {/* concerts */}
+        {/* ARCHIVED */}
         <Route path="/2018-2019" element={<Concerts18 />} />
-        <Route path="/2019-2020" element={<Concerts19 />} />
-        <Route path="/2019-2020/videogamesymphony" element={<VGS />} />
-        <Route path="/2019-2020/videogamesymphony" element={<VGS />} />
-        <Route path="/2019-2020/popsonbroadway" element={<Broadway />} />
-        <Route path="/2019-2020/hmw" element={<HMW />} />
+        {/* Current */}
+        <Route path="/programming" element={<Concerts22 />} />
+        <Route path="/programming/videogamesymphony" element={<VGS />} />
+        <Route path="/programming/popsonbroadway" element={<Broadway />} />
         {/* orchestra */}
         <Route path="/auditions" element={<Auditions />} />
         <Route path="/conductors" element={<Conductors />} />

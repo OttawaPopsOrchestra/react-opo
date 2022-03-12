@@ -15,109 +15,6 @@ import DateTime from "./DateTime";
 import MeridianAddressInfo from "./MeridianAddressInfo";
 import Playlist from "../Playlist";
 
-const ConcertSingleStyles = styled.div`
-  padding: 0 5em;
-
-  .title {
-    text-align: center;
-    padding: 1em 0;
-    font-weight: 900;
-    font-size: 50px;
-  }
-
-  .generalInfoBlock {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
-
-    .generalInfoGrid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-    }
-
-    img {
-      width: 100%;
-    }
-
-    .generalInfo {
-      background-color: black;
-      color: white;
-      padding: 2em 3em;
-
-      .buyTicketsButton {
-        button {
-          width: 100%;
-        }
-      }
-
-      .infoHeader {
-        font-weight: 900;
-        font-size: ${FONT_SIZE_LARGE - 2}px;
-        padding-bottom: 5px;
-      }
-
-      .info {
-        padding-bottom: 1em;
-        font-size: ${FONT_SIZE_MEDIUM - 4}px;
-
-        a {
-          color: white;
-          text-decoration: none;
-        }
-
-        /* Override DateTime styles */
-        div[class^="DateTime"] {
-          justify-content: left !important;
-
-          a {
-            color: white !important;
-          }
-        }
-      }
-    }
-  }
-
-  .concert-description {
-    padding-top: 2em;
-    font-size: ${FONT_SIZE_MEDIUM - 2}px;
-  }
-
-  @media (max-width: ${BREAKPOINT_MOBILE}px) {
-    padding: 0 1em;
-
-    .title {
-      font-size: ${FONT_SIZE_LARGE}px;
-    }
-
-    .generalInfoBlock {
-      grid-template-columns: auto;
-
-      .generalInfoGrid {
-        grid-template-columns: auto;
-      }
-
-      img {
-        width: 100%;
-      }
-
-      .generalInfo:first-child {
-        padding-top: 2em;
-      }
-
-      .generalInfo {
-        padding: 0em 2em;
-
-        .infoHeader {
-          font-size: ${FONT_SIZE_MEDIUM - 2}px;
-        }
-
-        .info {
-          font-size: ${FONT_SIZE_SMALL}px;
-        }
-      }
-    }
-  }
-`;
-
 const HeaderInfo = ({ header, info }: { header: string; info: any }) => {
   return (
     <>
@@ -187,8 +84,127 @@ export default function ConcertSingle({
       </div>
       <div className="concert-description">
         <div>{description}</div>
+        <div className="safety">
+          <div className="safetyTitle">{t("safety")}</div>
+          <div>{t("safety-val")}</div>
+        </div>
         {spotify && <Playlist link={spotify} />}
       </div>
     </ConcertSingleStyles>
   );
 }
+
+const ConcertSingleStyles = styled.div`
+  padding: 0 5em;
+
+  .title {
+    text-align: center;
+    padding: 1em 0;
+    font-weight: 900;
+    font-size: 50px;
+    font-family: "Quicksand";
+  }
+
+  .safety {
+    padding: 1em 0;
+
+    .safetyTitle {
+      font-size: 26px;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+  }
+
+  .generalInfoBlock {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+
+    .generalInfoGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .generalInfo {
+      background-color: black;
+      color: white;
+      padding: 2em 3em;
+
+      .buyTicketsButton {
+        button {
+          width: 100%;
+        }
+      }
+
+      .infoHeader {
+        font-weight: 900;
+        font-size: ${FONT_SIZE_LARGE - 2}px;
+        padding-bottom: 5px;
+      }
+
+      .info {
+        padding-bottom: 1em;
+        font-size: ${FONT_SIZE_MEDIUM - 4}px;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
+        /* Override DateTime styles */
+        div[class^="DateTime"] {
+          justify-content: left !important;
+
+          a {
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+
+  .concert-description {
+    font-family: "Quicksand";
+    padding-top: 2em;
+    font-size: ${FONT_SIZE_MEDIUM - 2}px;
+  }
+
+  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    padding: 0 1em;
+
+    .title {
+      font-size: ${FONT_SIZE_LARGE}px;
+    }
+
+    .generalInfoBlock {
+      grid-template-columns: auto;
+
+      .generalInfoGrid {
+        grid-template-columns: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .generalInfo:first-child {
+        padding-top: 2em;
+      }
+
+      .generalInfo {
+        padding: 0em 2em;
+
+        .infoHeader {
+          font-size: ${FONT_SIZE_MEDIUM - 2}px;
+        }
+
+        .info {
+          font-size: ${FONT_SIZE_SMALL}px;
+        }
+      }
+    }
+  }
+`;

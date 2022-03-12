@@ -15,8 +15,14 @@ export default function VGS() {
         ticketLink:
           "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventInfo?ticketCode=GS%3ACP%3AC1920%3ACT0320N%3A&linkID=centrepointe&shopperContext",
       },
+      {
+        date: t("concert2Date"),
+        time: t("concert2Time"),
+        ticketLink:
+          "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventInfo?ticketCode=GS%3ACP%3AC1920%3ACT0320N%3A&linkID=centrepointe&shopperContext",
+      },
     ],
-    price: "$45.75 - $50.75",
+    price: "$34.00 - $50.75",
     buyTickets:
       "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventInfo?ticketCode=GS%3ACP%3AC1920%3ACT0320N%3A&linkID=centrepointe&shopperContext",
     description: t("description"),

@@ -13,12 +13,18 @@ export default function Broadway() {
         date: t("concert1Date"),
         time: t("concert1Time"),
         ticketLink:
-          "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=CT0516N&linkID=centrepointe&shopperContext=undefined&caller=&appCode=",
+          "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=CT0516N&linkID=centrepointe&shopperContext=&caller=&appCode=",
+      },
+      {
+        date: t("concert2Date"),
+        time: t("concert2Time"),
+        ticketLink:
+          "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=CT0516N&linkID=centrepointe&shopperContext=&caller=&appCode=",
       },
     ],
     price: "$25.75 - $50.75",
     buyTickets:
-      "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=CT0516N&linkID=centrepointe&shopperContext=undefined&caller=&appCode=",
+      "https://meridianshenkman.evenue.net/cgi-bin/ncommerce3/SEGetEventList?groupCode=CT0516N&linkID=centrepointe&shopperContext=&caller=&appCode=",
     description: t("description"),
     spotify: "https://open.spotify.com/embed/playlist/4EBL0jzb36rCwR1EFXT7kq",
   };
