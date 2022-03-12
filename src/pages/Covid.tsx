@@ -9,11 +9,62 @@ import {
   BREAKPOINT_MOBILE,
 } from "../constants/constants";
 
+export default function Covid() {
+  const { t } = useTranslation("Covid");
+
+  return (
+    <CovidStyles>
+      <div></div>
+      <div className="header">{t("title")}</div>
+      <div className="content">
+        <i>{t("updated")}</i>
+        <b>
+          <p style={{ fontSize: "22px" }}>{t("p1")}</p>
+        </b>
+        <p>{t("p2", { postProcess: "markdown-jsx" })}</p>
+        <p>{t("p3")}</p>
+        <p>{t("p4", { postProcess: "markdown-jsx" })}</p>
+
+        <div className="dates">
+          <div className="subHeader">{t("dates")}</div>
+          <ul>
+            <li>{t("dates-1", { postProcess: "markdown-jsx" })}</li>
+            <li>{t("dates-2", { postProcess: "markdown-jsx" })}</li>
+          </ul>
+          <p>{t("dates-p", { postProcess: "markdown-jsx" })}</p>
+        </div>
+
+        <div className="subHeader">{t("refund")}</div>
+        <p>{t("refund-1", { postProcess: "markdown-jsx" })}</p>
+
+        <div className="subHeader">{t("meridian")}</div>
+        <p>{t("phone")}</p>
+        <p>{t("toll")}</p>
+
+        <div className="subHeader">{t("additional")}</div>
+        <p>{t("add_1", { postProcess: "markdown-jsx" })}</p>
+        <ul>
+          <li>{t("li_1")}</li>
+          <li>{t("li_2")}</li>
+          <li>{t("li_3")}</li>
+        </ul>
+
+        <p>{t("p5", { postProcess: "markdown-jsx" })}</p>
+        <b>
+          <p>{t("sincerely")}</p>
+          <p>{t("team")}</p>
+        </b>
+      </div>
+    </CovidStyles>
+  );
+}
+
 const CovidStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Quicksand";
 
   .header {
     display: flex;
@@ -30,13 +81,26 @@ const CovidStyles = styled.div`
   }
 
   .content {
-    padding: 1em 10em 5em;
+    padding: 1em 0 5em;
+    width: 60%;
 
     .subHeader {
       font-size: ${FONT_SIZE_MEDIUM}px;
       font-weight: 700;
       color: ${primaryMaroon};
       padding-top: 1em;
+    }
+
+    .dates {
+      color: #920503;
+      background-color: #efefef;
+      margin: 0 auto;
+
+      padding: 2em;
+      border-radius: 25px;
+      width: 90%;
+      margin: 2em auto;
+      box-shadow: 15px 15px rgba(191, 191, 191, 0.8);
     }
 
     p,
@@ -48,81 +112,19 @@ const CovidStyles = styled.div`
       color: ${primaryMaroon};
       text-decoration: none;
     }
-
-    iframe {
-      display: flex;
-      margin: 0 auto;
-      width: 560px;
-      height: 340px;
-    }
   }
 
   @media (max-width: ${BREAKPOINT_MOBILE}px) {
     .content {
-      padding: 0;
+      padding: 1em 0 0;
       width: 90%;
-    }
-    iframe {
-      width: 100% !important;
+
+      .dates {
+        padding: 1.5em;
+        width: 85%;
+        margin: 1em auto;
+        box-shadow: 5px 5px rgba(191, 191, 191, 0.8);
+      }
     }
   }
 `;
-
-export default function Covid() {
-  const { t } = useTranslation("Covid");
-
-  return (
-    <CovidStyles>
-      <div className="header">{t("title")}</div>
-      <div className="content">
-        <b>
-          <p style={{ fontSize: "22px" }}>{t("p1")}</p>
-        </b>
-        <p>{t("p2")}</p>
-
-        <p>
-          {t("p3")}
-          <a href="/2019-2020/videogamesymphony">{t("p3_vgs")}</a>
-          {t("p3_2")}
-          <a href="/2019-2020/popsonbroadway">{t("p3_pob")}</a>
-          {t("p3_3")}
-        </p>
-
-        <p>{t("p4")}</p>
-
-        <div className="subHeader">{t("refund")}</div>
-        <p>
-          {t("refund-1")}
-          <a href="mailto:Nicolas.alain@ottawa.ca">nicolas.alain@ottawa.ca</a>
-          {t("refund-2")}
-        </p>
-
-        <div className="subHeader">{t("meridian")}</div>
-        <p>{t("phone")}</p>
-        <p>{t("toll")}</p>
-
-        <div className="subHeader">{t("additional")}</div>
-        <p>{t("add_1")}</p>
-        <ul>
-          <li>{t("li_1")}</li>
-          <li>{t("li_2")}</li>
-          <li>{t("li_3")}</li>
-        </ul>
-
-        <p>
-          {t("moreInfo")}
-          <a href={t("link")}>{t("linkName")}</a>
-          {t("moreInfo_2")}
-        </p>
-
-        <p>{t("final")}</p>
-        <b>
-          <p>{t("sincerely")}</p>
-          <p>{t("team")}</p>
-        </b>
-
-        <iframe title="Covid-19" src={t("video")}></iframe>
-      </div>
-    </CovidStyles>
-  );
-}

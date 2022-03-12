@@ -1,19 +1,18 @@
 {
-  "title": "Comment l’OPO réagit au COVID-19",
+  "updated": "Mis à jour le: le 11 mars 2022",
+  "title": "Comment l’OPO réagit à la COVID-19",
   "p1": "Chers spectateurs,",
-  "p2": "La santé et sécurité de nos publics, musiciens et membres du personnel nous est prioritaire. Le 6 avril 2020, la ville d’Ottawa a annoncé qu'elle prolongeait la fermeture de toutes les installations et de tous les parcs municipaux jusqu'au 30 juin 2020 dans le cadre de sa réponse à la pandémie du COVID-19. L'Orchestre Pop d'Ottawa a pris la décision de reporter à l'automne 2020 toutes les représentations restantes de la saison 2019-20.",
+  "p2": "La santé et sécurité de nos publics, musiciens et membres du personnel nous est prioritaire. Par conséquent, nous continuons d'exiger <b>une preuve de vaccination</b> jusqu'à nouvel ordre. Les spectateurs devront également porter un masque lorsqu'ils ou elles sont assis(es) dans les salles de spectacle. De plus, à compter du 1er mars 2022, les limites de capacité ont été levées et la distanciation physique n'est plus requise.",
+  "p3": "Les personnes souhaitant assister à des spectacles, des réunions et des événements doivent présenter leur preuve de vaccination contre la COVID-19 muni d’un code QR ou la version disponible sur l’application créée à cet effet. On peut également fournir une preuve de vaccination en version papier et une pièce d’identité avec photo.",
+  "p4": "Les <b>seules exemptions</b> autorisées pour pouvoir accéder à l’édifice concernent les personnes non vaccinées bénéficiant d’exemptions médicales et les personnes de moins de 12 ans. Les personnes qui ne peuvent pas recevoir le vaccin en raison d’exemptions médicales devront enregistrer leur note du médecin avec l’application mobile VérifOntario.",
 
-  "p3": "La ",
-  "p3_vgs": "Symphonie de jeux vidéo",
-  "p3_2": " prévue pour le 21 mars 2021 aura maintenant lieu le vendredi 9 octobre 2020 à 19h30 et ",
-  "p3_pob": "Pops, sur Broadway!",
-  "p3_3": " aura lieu le samedi 14 novembre à 19h30, aux Théâtres Meridian à Centrepointe, 101, promenade Centrepointe.",
-
-  "p4": "Cette décision n’a pas été prise à la légère, mais nous constatons qu’il s’agit de la bonne décision pour nos spectateurs et pour nous-mêmes.",
+  "dates": "Nouvelles dates pour les spectacles précédemment reportés",
+  "dates-1": "La Symphonie de jeux vidéo prévue pour le 21 mars 2021 aura maintenant lieu <u>le vendredi et samedi 13 and 14 mai 2022 à 19h30.</u>",
+  "dates-2": "Pops, sur Broadway! aura lieu <u>le dimanche and lundi 6 & 7 novembre à 19h00.</u>",
+  "dates-p": "Les deux spectacles auront lieu aux Théâtres Meridian à Centrepointe, 101, promenade Centrepointe.",
 
   "refund": "Message concernant les remboursements et échanges",
-  "refund-1": "Veuillez conserver vos billets puisque tous les détenteurs de billets verront leurs billets transférés aux nouvelles dates de représentations. Les détenteurs de billets qui ne peuvent pas assister aux nouvelles dates de représentations peuvent demander un remboursement en contactant directement la billetterie des Théâtres Meridian. Sachez que les employés municipaux travaillent à domicile et que les lignes téléphoniques sont fermées. Veuillez contacter le responsable de la billetterie, Nicolas Alain, par e-mail à l'adresse",
-  "refund-2": " en joignant vos demandes de remboursement ou d'échange.",
+  "refund-1": "Veuillez conserver vos billets puisque tous les détenteurs de billets verront leurs billets transférés aux nouvelles dates de représentations. Les détenteurs de billets qui ne peuvent pas assister aux nouvelles dates de représentations peuvent demander un remboursement en contactant directement la billetterie des Théâtres Meridian par courriel à <a href='mailto:meridiancentrepointe@ottawa.ca'>meridiancentrepointe@ottawa.ca</a>.",
 
   "meridian": "Billetterie des Théâtres Meridian à Centrepointe",
   "phone": "Téléphone : 613-580-2700 (lignes téléphoniques fermées)",
@@ -25,14 +24,7 @@
   "li_2": "Couvrir votre nez et votre bouche avec un mouchoir en toussant ou en éternuant (avec votre coude si un mouchoir n’est pas à votre disposition);",
   "li_3": "Considérer des légers coups de coude – ou même des mains de jazz – au lieu de se serrer la main!",
 
-  "moreInfo": "Pour de plus amples renseignements sur la COVID-19, veuillez consulter ",
-  "link": "https://www.canada.ca/fr/sante-publique/services/maladies/2019-nouveau-coronavirus.html",
-  "linkName": "la page web de l’Agence de la santé publique du Canada. ",
-  "moreInfo_2": "Nous vous recommandons également de visionner cette vidéo informative de la Dre Vera Etches, Médecin chef en santé publique de Santé publique Ottawa.",
-
-  "final": "Tous les membres de l’Orchestre Pop d’Ottawa vous présentent les meilleurs vœux pour votre santé physique et mentale au cours de cette période de temps difficile. Nous espérons partager notre amour pour la musique avec vous bientôt, tout en vous souhaitant un avenir rempli de musique et de bonne santé.",
+  "p5": "Pour de plus amples renseignements sur la COVID-19, veuillez consulter <a href='https://www.canada.ca/fr/sante-publique/services/maladies/2019-nouveau-coronavirus.html' target='_blank'>la page web de l’Agence de la santé publique du Canada</a>. Nous vous présentons nos meilleurs vœux pour votre santé physique et mentale au cours de cette période de temps difficile. Nous espérons partager notre amour pour la musique avec vous bientôt, tout en vous souhaitant un avenir rempli de musique et de bonne santé.",
   "sincerely": "Sincèrement, ",
-  "team": "L’équipe de l’Orchestre Pop d’Ottawa",
-
-  "video": "https://www.youtube.com/embed/f2gRys568BA"
+  "team": "L’équipe de l’Orchestre Pop d’Ottawa"
 }
