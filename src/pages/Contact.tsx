@@ -10,54 +10,6 @@ import {
   FONT_SIZE_SMALL,
 } from "../constants/constants";
 
-const ContactStyles = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: ${lighterGrey};
-  padding: 3em 5em;
-
-  .pageTitle {
-    font-size: ${FONT_SIZE_EXTRA_LARGE}px;
-    color: ${primaryMaroon};
-  }
-
-  .contact {
-    font-size: ${FONT_SIZE_MEDIUM - 2}px;
-    a {
-      color: ${primaryMaroon};
-      text-decoration: none;
-    }
-  }
-
-  .contactGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(32em, 1fr));
-    grid-row-gap: 2em;
-  }
-
-  @media (max-width: ${BREAKPOINT_MOBILE}px) {
-    padding: 2em 0em !important;
-    align-items: center;
-
-    .pageTitle {
-      font-size: ${FONT_SIZE_MEDIUM + 4}px;
-      color: ${primaryMaroon};
-      width: 90vw;
-    }
-
-    .contact {
-      width: 90vw;
-      font-size: ${FONT_SIZE_SMALL}px;
-    }
-
-    .contactGrid {
-      width: 90vw;
-      grid-template-columns: auto;
-      grid-gap: 10px;
-    }
-  }
-`;
-
 export default function Contact() {
   const { t } = useTranslation("Contact");
 
@@ -117,3 +69,51 @@ export default function Contact() {
     </ContactStyles>
   );
 }
+
+const ContactStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: ${lighterGrey};
+  padding: 3em 5em;
+
+  .pageTitle {
+    font-size: ${FONT_SIZE_EXTRA_LARGE}px;
+    color: ${primaryMaroon};
+  }
+
+  .contact {
+    font-size: ${FONT_SIZE_MEDIUM - 2}px;
+    a {
+      color: ${primaryMaroon};
+      text-decoration: none;
+    }
+  }
+
+  .contactGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32em, 1fr));
+    grid-row-gap: 2em;
+  }
+
+  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    padding: 2em 0em !important;
+    align-items: center;
+
+    .pageTitle {
+      font-size: ${FONT_SIZE_MEDIUM + 4}px;
+      color: ${primaryMaroon};
+      width: 90vw;
+    }
+
+    .contact {
+      width: 90vw;
+      font-size: ${FONT_SIZE_SMALL}px;
+    }
+
+    .contactGrid {
+      width: 90vw;
+      grid-template-columns: auto;
+      grid-gap: 10px;
+    }
+  }
+`;

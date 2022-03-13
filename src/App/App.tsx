@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/TopBar/TopBar";
@@ -9,6 +8,8 @@ import Broadway from "../pages/ConcertSinglePages/Concerts19/Broadway";
 import VGS from "../pages/ConcertSinglePages/Concerts19/VGS";
 import Contact from "../pages/Contact";
 import Covid from "../pages/Covid";
+import Donate from "../pages/GetInvolved/Donate";
+import SupportUs from "../pages/GetInvolved/SupportUs";
 import HomePage from "../pages/HomePage";
 import Auditions from "../pages/Orchestra/Auditions";
 import Conductors from "../pages/Orchestra/Conductors";
@@ -38,13 +39,19 @@ function App() {
         {/* orchestra */}
         <Route path="/auditions" element={<Auditions />} />
         <Route path="/conductors" element={<Conductors />} />
-        {/* stories */}
+        {/* community */}
+        {/* community - stories */}
         <Route path="/stories" element={<Stories />} />
         <Route path="/stories/story1" element={<Story1 />} />
         <Route path="/stories/twinflames" element={<TwinFlames />} />
         <Route path="/stories/raywatdeonandan" element={<Raywat />} />
         <Route path="/stories/jeffleiper" element={<JeffLeiper />} />
         <Route path="/stories/bedfordtrio" element={<BedfordTrio />} />
+        {/* get involved */}
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/support-us" element={<SupportUs />} />
+        {/* <Route path="/join-our-board" element={<JoinOurBoard />} /> */}
+
         {/* other */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/covid" element={<Covid />} />
