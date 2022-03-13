@@ -3,12 +3,13 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import ActionButton from "../../components/Buttons/ActionButton";
 import { primaryMaroon } from "../../constants/colors";
+import { BREAKPOINT_MOBILE } from "../../constants/constants";
 
 export default function SupportUs() {
   const { t } = useTranslation(["Donate", "Concerts"]);
 
   return (
-    <SupportUsStyles container spacing={5}>
+    <SupportUsStyles container spacing={{ xs: 0, md: 5 }}>
       <Grid item xs={12} md={6}>
         <img
           src="img/getInvolved/donate/donate.jpg"
@@ -52,5 +53,13 @@ const SupportUsStyles = styled(Grid)`
   button {
     margin-top: 1em;
     padding: 1em 2em;
+  }
+
+  @media (max-width: ${BREAKPOINT_MOBILE}px) {
+    padding: 10px;
+    .body {
+      padding: 10px;
+      text-align: center;
+    }
   }
 `;

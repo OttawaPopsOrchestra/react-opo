@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import ActionButtonOutline from "../../components/Buttons/ActionButtonOutline";
+import { primaryMaroon } from "../../constants/colors";
+import { BREAKPOINT_TABTOP } from "../../constants/constants";
 
 export default function Donate() {
   const { t } = useTranslation(["Donate", "Concerts"]);
@@ -41,6 +43,20 @@ const DonateStyles = styled.div`
 
     button {
       padding: 1em 2em;
+    }
+  }
+
+  @media (max-width: ${BREAKPOINT_TABTOP}px) {
+    background-image: none;
+    background-color: ${primaryMaroon};
+    padding: 0;
+    margin: 0;
+
+    .content {
+      .preview {
+        width: 95%;
+        padding: 1em 0;
+      }
     }
   }
 `;

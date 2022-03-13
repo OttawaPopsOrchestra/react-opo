@@ -2,6 +2,25 @@ import React from "react";
 import styled from "styled-components/macro";
 import { FONT_SIZE_SMALL, FONT_SIZE_MEDIUM } from "../../constants/constants";
 
+export default function FastFacts({
+  title,
+  facts,
+}: {
+  title: string;
+  facts: string[];
+}) {
+  return (
+    <FastFactStyles>
+      <div className="fastFactsTitle">{title}</div>
+      <ul>
+        {facts.map((fact) => (
+          <li key={fact}>{fact}</li>
+        ))}
+      </ul>
+    </FastFactStyles>
+  );
+}
+
 const FastFactStyles = styled.div`
   background-color: rgba(106, 102, 164, 0.2);
   padding: 2em 2em 1em;
@@ -21,22 +40,3 @@ const FastFactStyles = styled.div`
     padding-bottom: 0.5em;
   }
 `;
-
-export default function FastFacts({
-  title,
-  facts,
-}: {
-  title: string;
-  facts: string[];
-}) {
-  return (
-    <FastFactStyles>
-      <div className="fastFactsTitle">{title}</div>
-      <ul>
-        {facts.map((fact) => (
-          <li key={fact}>{fact}</li>
-        ))}
-      </ul>
-    </FastFactStyles>
-  );
-}

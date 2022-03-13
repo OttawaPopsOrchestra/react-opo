@@ -9,6 +9,7 @@ import VGS from "../pages/ConcertSinglePages/Concerts19/VGS";
 import Contact from "../pages/Contact";
 import Covid from "../pages/Covid";
 import Donate from "../pages/GetInvolved/Donate";
+import JoinOurBoard from "../pages/GetInvolved/JoinOurBoard";
 import SupportUs from "../pages/GetInvolved/SupportUs";
 import HomePage from "../pages/HomePage";
 import Auditions from "../pages/Orchestra/Auditions";
@@ -50,7 +51,7 @@ function App() {
         {/* get involved */}
         <Route path="/donate" element={<Donate />} />
         <Route path="/support-us" element={<SupportUs />} />
-        {/* <Route path="/join-our-board" element={<JoinOurBoard />} /> */}
+        <Route path="/join-our-board" element={<JoinOurBoard />} />
 
         {/* other */}
         <Route path="/contact" element={<Contact />} />
